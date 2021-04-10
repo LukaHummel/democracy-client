@@ -964,6 +964,11 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
+"@democracy-deutschland/ui-test@0.0.1-alpha.6":
+  version "0.0.1-alpha.6"
+  resolved "https://registry.yarnpkg.com/@democracy-deutschland/ui-test/-/ui-test-0.0.1-alpha.6.tgz#bd50f8c312b2e1e010b2ae49198b2b926fec7094"
+  integrity sha512-SNua6P8xui+JO8XyY86pF97RBPrLLWZBbc0HDXogsKpWsOSDp1TLerLcOaje4fFrG9J264rDoX6/aJ49JdMYyw==
+
 "@egjs/hammerjs@^2.0.17":
   version "2.0.17"
   resolved "https://registry.yarnpkg.com/@egjs/hammerjs/-/hammerjs-2.0.17.tgz#5dc02af75a6a06e4c2db0202cae38c9263895124"
