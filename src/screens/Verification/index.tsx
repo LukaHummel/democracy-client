@@ -17,7 +17,7 @@ const ScrollView = styled.ScrollView.attrs(() => ({
     paddingVertical: 18,
   },
 }))`
-  background-color: ${({ theme }) => theme.backgroundColor};
+  background-color: ${({ theme }) => theme.colors.background.primary};
 `;
 
 const DemocracyBubble = styled(SvgDemocracyBubble)`
@@ -26,9 +26,9 @@ const DemocracyBubble = styled(SvgDemocracyBubble)`
 
 const Text = styled.Text`
   font-size: 15px;
-  color: ${({ theme }) => theme.colors.secondaryText};
-  padding-horizontal: ${({ theme }) => theme.paddings.outer};
-  padding-top: ${({ theme }) => theme.paddings.outer};
+  color: ${({ theme }) => theme.colors.text.secondary};
+  padding-horizontal: ${({ theme }) => theme.spaces.default};
+  padding-top: ${({ theme }) => theme.spaces.default};
 `;
 
 const TextLink = styled.Text`
@@ -43,7 +43,7 @@ export const Space = styled.View`
 `;
 
 export const ButtonNext = styled(Button)`
-  margin-horizontal: ${({ theme }) => theme.paddings.outer};
+  margin-horizontal: ${({ theme }) => theme.spaces.default};
 `;
 
 type VerificationNavigationProps = StackNavigationProp<

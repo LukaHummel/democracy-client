@@ -23,7 +23,7 @@ const Text = styled.Text`
   margin-top: 11px;
   margin-bottom: 11px;
   text-align: center;
-  color: ${({ theme }) => theme.primaryColor}; // TODO Right Color?
+  color: ${({ theme }) => theme.colors.primary}; // TODO Right Color?
 `;
 
 const ListContainer = styled.View`
@@ -32,10 +32,11 @@ const ListContainer = styled.View`
   padding-right: 18px;
 `;
 
-const ListText = styled.Text`
+const ListText = styled.Text<{ paddingLeft?: number }>`
   padding-top: 11px;
   padding-bottom: 11px;
-  color: ${({ theme }) => theme.primaryColor}; // TODO Right color?
+  padding-left: ${({ paddingLeft }) => (paddingLeft ? `${paddingLeft}px` : 0)};
+  color: ${({ theme }) => theme.colors.primary}; // TODO Right color?
 `;
 
 export interface SyncObj {
@@ -52,7 +53,7 @@ const ListElement = ({ label, text }: { label: string; text: string }) => {
   return (
     <ListContainer>
       <ListText>{label}</ListText>
-      <ListText style={{ paddingLeft: 18 }}>{text}</ListText>
+      <ListText paddingLeft={18}>{text}</ListText>
     </ListContainer>
   );
 };

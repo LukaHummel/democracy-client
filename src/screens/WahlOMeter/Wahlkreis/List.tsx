@@ -11,12 +11,12 @@ import { ConstituencyContext } from 'context/constituency';
 
 const Wrapper = styled.View`
   flex: 1;
-  background-color: ${({ theme }) => theme.backgroundColor};
+  background-color: ${({ theme }) => theme.colors.background.primary};
 `;
 
 const List = styled(FlatList as new () => FlatList<Procedure>)`
   flex: 1;
-  background-color: ${({ theme }) => theme.backgroundColor};
+  background-color: ${({ theme }) => theme.colors.background.primary};
 `;
 
 export const WomConstituencyList: React.FC = () => {

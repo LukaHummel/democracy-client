@@ -16,7 +16,7 @@ export const CountryMapSvg: React.FC<Props> = ({ children, width }) => {
         strokeLinecap="round"
         strokeLinejoin="round"
         fill="none"
-        stroke={theme.colors.primaryText}
+        stroke={theme.colors.text.primary}
         strokeWidth={0.6}
       />
     </Svg>

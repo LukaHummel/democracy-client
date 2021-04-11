@@ -8,7 +8,7 @@ import { getTheme } from 'styles/theme';
 
 const Container = styled.View`
   flex: 1;
-  background-color: ${({ theme }) => theme.backgroundColor};
+  background-color: ${({ theme }) => theme.colors.background.primary};
 `;
 
 const PdfViewer = styled(Pdf)`
@@ -42,11 +42,11 @@ export const PdfScreenOptions = ({
 }): StackNavigationOptions => ({
   headerShown: true,
   headerStyle: {
-    backgroundColor: getTheme().colors.header,
+    backgroundColor: getTheme().colors.primary,
     elevation: 0,
     shadowOpacity: 0,
   },
   headerBackTitleVisible: false,
-  headerTintColor: getTheme().colors.white,
+  headerTintColor: getTheme().colors.secondary,
   title: route.params.title,
 });

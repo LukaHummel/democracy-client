@@ -24,7 +24,7 @@ const ScrollWrapper = styled.ScrollView.attrs({
   },
 })`
   flex-grow: 1;
-  background-color: ${({ theme }) => theme.backgroundColor};
+  background-color: ${({ theme }) => theme.colors.background.primary};
 `;
 
 const MemberImageWrapper = styled.View`
@@ -59,7 +59,7 @@ const TextGrey = styled(Text)`
 `;
 
 const TextLighGrey = styled(Text)`
-  color: ${({ theme }) => theme.colors.secondaryText};
+  color: ${({ theme }) => theme.colors.text.secondary};
 `;
 
 const SegmentWrapper = styled.View`

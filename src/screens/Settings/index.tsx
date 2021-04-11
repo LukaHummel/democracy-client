@@ -14,12 +14,12 @@ import { NotificationsContext } from 'context/NotificationPermission';
 import { Segment } from 'components/Segment';
 
 const Wrapper = styled.View`
-  background-color: ${({ theme }) => theme.backgroundColor};
+  background-color: ${({ theme }) => theme.colors.background.primary};
   flex: 1;
 `;
 
 const Text = styled.Text`
-  color: ${({ theme }) => theme.colors.primaryText};
+  color: ${({ theme }) => theme.colors.text.primary};
   font-size: 17px;
   margin-right: auto;
 `;

@@ -3,8 +3,8 @@ import ContentLoader, { Circle, Rect } from 'react-content-loader/native';
 import styled, { useTheme } from 'styled-components/native';
 
 const Wrapper = styled.View`
-  padding-horizontal: ${({ theme }) => theme.paddings.outer};
-  padding-vertical: ${({ theme }) => theme.paddings.outer};
+  padding-horizontal: ${({ theme }) => theme.spaces.default};
+  padding-vertical: ${({ theme }) => theme.spaces.default};
   width: 100%;
   height: 110px;
 `;
@@ -16,8 +16,8 @@ export const ListItemContentLoader = () => {
       <ContentLoader
         viewBox="0 0 380 70"
         animate
-        backgroundColor={theme.colors.secondaryText}
-        foregroundColor={theme.backgroundColor}
+        backgroundColor={theme.colors.text.secondary}
+        foregroundColor={theme.colors.background.primary}
         opacity={0.5}>
         <Rect x="340" y="0" rx="3" ry="3" width="40" height="10" />
         <Circle cx="372" cy="30" r="8" />

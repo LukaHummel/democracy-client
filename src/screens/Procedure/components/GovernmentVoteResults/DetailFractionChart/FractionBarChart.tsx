@@ -55,7 +55,7 @@ export const FractionBarChart: React.FC<Props> = ({
               yScale.bandwidth() +
               ((yScale(party) || 0) - yScale.bandwidth() / 2)
             }
-            fill={themeContext.colors.primaryText}>
+            fill={themeContext.colors.text.primary}>
             {party}
           </Text>
         ))}

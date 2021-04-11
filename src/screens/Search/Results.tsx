@@ -31,13 +31,13 @@ const isProcedureGuard = (
 
 const ListText = styled.Text`
   font-size: 18px;
-  color: ${({ theme }) => theme.colors.primaryText};
+  color: ${({ theme }) => theme.colors.text.primary};
   padding-left: 8px;
 `;
 
 const Text = styled.Text`
   font-size: 18px;
-  color: ${({ theme }) => theme.colors.primaryText};
+  color: ${({ theme }) => theme.colors.text.primary};
 `;
 
 const Row = styled.TouchableOpacity`
@@ -47,7 +47,7 @@ const Row = styled.TouchableOpacity`
 
 const ItemSeperator = styled.View`
   height: 1px;
-  background-color: ${({ theme }) => theme.colors.secondaryText};
+  background-color: ${({ theme }) => theme.colors.text.secondary};
   opacity: 0.5;
 `;
 

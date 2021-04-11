@@ -26,7 +26,7 @@ const website = 'https://www.democracy-deutschland.de/';
 const Wrapper = styled.ScrollView.attrs({
   scrollIndicatorInsets: { right: 1 }, // TODO do cleanfix when there is a correct solution (already closed but not solved without workaround) https://github.com/facebook/react-native/issues/26610
 })`
-  background-color: ${({ theme }) => theme.backgroundColor};
+  background-color: ${({ theme }) => theme.colors.background.primary};
 `;
 
 const ContactWrapper = styled.View`
@@ -44,7 +44,7 @@ const IconWrapper = styled.TouchableOpacity`
   border-radius: 33px;
   justify-content: center;
   align-items: center;
-  border-color: ${({ theme }) => theme.colors.secondaryText};
+  border-color: ${({ theme }) => theme.colors.text.secondary};
 `;
 
 const Spacer = styled.View`
@@ -52,7 +52,7 @@ const Spacer = styled.View`
 `;
 
 const FoldingContent = styled.View`
-  padding-horizontal: ${({ theme }) => theme.paddings.outer};
+  padding-horizontal: ${({ theme }) => theme.spaces.default};
 `;
 
 interface MarkdownProps {
@@ -64,19 +64,19 @@ const Markdown: React.FC<MarkdownProps> = ({ children, styles = {} }) => {
   const markdownStyles = deepmerge(
     {
       paragraph: {
-        color: theme.colors.secondaryText,
+        color: theme.colors.text.secondary,
         ...(styles.paragraph || []),
       },
       listItemUnorderedContent: {
-        color: theme.colors.secondaryText,
+        color: theme.colors.text.secondary,
         ...(styles.listItemUnorderedContent || []),
       },
       listItemBullet: {
-        color: theme.colors.secondaryText,
+        color: theme.colors.text.secondary,
         ...(styles.listItemBullet || []),
       },
       link: {
-        color: theme.colors.primaryColoredText,
+        color: theme.colors.text.colored,
         ...(styles.link || []),
       },
     },
@@ -119,14 +119,18 @@ export const CredentialsScreen: React.FC<Props> = () => {
       <Spacer />
       <ContactWrapper>
         <IconWrapper onPress={linking(phoneNumber)}>
-          <SvgPhone color={theme.colors.secondaryText} width={30} height={30} />
+          <SvgPhone
+            color={theme.colors.text.secondary}
+            width={30}
+            height={30}
+          />
         </IconWrapper>
         <IconWrapper onPress={linking(email)}>
-          <SvgMail color={theme.colors.secondaryText} width={30} height={30} />
+          <SvgMail color={theme.colors.text.secondary} width={30} height={30} />
         </IconWrapper>
         <IconWrapper onPress={linking(website)}>
           <SvgPlanet
-            color={theme.colors.secondaryText}
+            color={theme.colors.text.secondary}
             width={30}
             height={30}
           />

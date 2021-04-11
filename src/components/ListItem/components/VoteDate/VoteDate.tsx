@@ -8,11 +8,11 @@ interface Props extends VoteDateFragment {}
 const DateText = styled.Text<Pick<Props, 'voteDate'> & { running: boolean }>`
   color: ${({ voteDate, running, theme }) => {
     if (running) {
-      return theme.colors.date.current;
+      return theme.colors.text.date.current;
     } else if (new Date(voteDate) > new Date()) {
-      return theme.colors.date.soon;
+      return theme.colors.text.date.future;
     }
-    return theme.colors.date.past;
+    return theme.colors.text.date.past;
   }};
   font-size: 12px;
 `;

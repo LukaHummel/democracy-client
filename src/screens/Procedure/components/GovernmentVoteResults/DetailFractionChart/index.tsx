@@ -20,7 +20,7 @@ export const DetailFractionChart: React.FC<Props> = ({ voteResults, size }) => {
     return null;
   }
 
-  const votedColors = themeContext.colors.governmentVotes;
+  const votedColors = themeContext.colors.vote.government;
 
   const chartLegendData: ChartLegendData[] = [
     {

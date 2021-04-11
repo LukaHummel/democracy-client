@@ -29,7 +29,7 @@ export const DetailGovernmentPieChart: React.FC<Props> = ({
   const innerTextTop =
     voteType === 'namentlich' ? total : voteResults.partyVotes.length;
 
-  const votedColors = themeContext.colors.governmentVotes;
+  const votedColors = themeContext.colors.vote.government;
 
   const colorRange = [
     votedColors.yes,

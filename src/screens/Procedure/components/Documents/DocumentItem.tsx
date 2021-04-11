@@ -16,17 +16,17 @@ const Container = styled.View`
 const ViewerButton = styled.TouchableOpacity`
   flex-direction: row;
   align-items: center;
-  padding-top: ${({ theme }) => theme.paddings.outer};
+  padding-top: ${({ theme }) => theme.spaces.default};
 `;
 
 const Text = styled.Text`
-  padding-left: ${({ theme }) => theme.paddings.outer};
+  padding-left: ${({ theme }) => theme.spaces.default};
   font-size: 13px;
-  color: ${({ theme }) => theme.colors.primaryColoredText};
+  color: ${({ theme }) => theme.colors.text.colored};
 `;
 
 const DownloadButton = styled.TouchableOpacity`
-  padding-top: ${({ theme }) => theme.paddings.outer};
+  padding-top: ${({ theme }) => theme.spaces.default};
   margin-left: auto;
 `;
 
@@ -46,7 +46,7 @@ export const DocumentItem: React.FC<Props> = ({
     <Container>
       <ViewerButton
         onPress={() => navigation.navigate('Pdf', { url, title: type })}>
-        <SvgDocument width={18} height={18} color={getTheme().primaryColor} />
+        <SvgDocument width={18} height={18} color={getTheme().colors.primary} />
         <Text>{`${type} (${editor} ${number})`}</Text>
       </ViewerButton>
 
@@ -59,7 +59,7 @@ export const DocumentItem: React.FC<Props> = ({
             failOnCancel: false,
           })
         }>
-        <SvgShare width={20} height={20} color={getTheme().primaryColor} />
+        <SvgShare width={20} height={20} color={getTheme().colors.primary} />
       </DownloadButton>
     </Container>
   );

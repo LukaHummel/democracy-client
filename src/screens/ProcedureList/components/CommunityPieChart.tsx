@@ -33,10 +33,8 @@ export const CommunityPieChart: React.FC<Props> = ({
     return;
   }, [getLocalVoteSelection, procedureId, voted]);
 
-  const {
-    voted: votedColors,
-    notVoted: notVotedColors,
-  } = themeContext.colors.communityVotes;
+  const votedColors = themeContext.colors.vote.community;
+  const notVotedColors = themeContext.colors.vote.notVoted;
 
   const [colorYes, colorAbsination, colorNo] = voted
     ? [votedColors.yes, votedColors.abstination, votedColors.no]

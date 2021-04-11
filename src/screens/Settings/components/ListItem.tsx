@@ -9,19 +9,19 @@ const Wrapper = styled.TouchableOpacity`
   padding-left: 16px;
   padding-right: 18px;
   border-bottom-width: 1px;
-  border-bottom-color: ${({ theme }) => theme.colors.womCharts.notMatching};
+  border-bottom-color: ${({ theme }) => theme.colors.vote.wom.missmatch};
   font-size: 17px;
 `;
 
 const Value = styled.Text<{ arrow: boolean }>`
   font-size: 17px;
-  color: ${({ theme }) => theme.colors.secondaryText};
+  color: ${({ theme }) => theme.colors.text.secondary};
   padding-right: ${({ arrow }) => (arrow ? 5 : 12)}px;
 `;
 
 const Description = styled.Text`
   font-size: 13px;
-  color: ${({ theme }) => theme.colors.secondaryText};
+  color: ${({ theme }) => theme.colors.text.secondary};
   padding-horizontal: 18px;
   padding-vertical: 8px;
 `;

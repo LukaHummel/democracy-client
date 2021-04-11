@@ -11,7 +11,7 @@ const Box = styled.View`
 const Text = styled.Text`
   padding-vertical: 9px;
   padding-horizontal: 9px;
-  color: ${({ theme }) => theme.colors.primaryText};
+  color: ${({ theme }) => theme.colors.text.primary};
   text-align: center;
   font-size: 17px;
 `;

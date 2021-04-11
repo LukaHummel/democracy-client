@@ -15,7 +15,7 @@ import { WomPartyHeader } from 'screens/WahlOMeter/Fraktionen/Header';
 
 const Wrapper = styled.View`
   flex: 1;
-  background-color: ${({ theme }) => theme.backgroundColor};
+  background-color: ${({ theme }) => theme.colors.background.primary};
 `;
 
 const ScrollWrapper = styled.ScrollView.attrs({
@@ -33,7 +33,7 @@ const Title = styled.Text`
   padding-horizontal: 18px;
   font-size: 34px;
   padding-bottom: 9px;
-  color: ${({ theme }) => theme.colors.primaryText};
+  color: ${({ theme }) => theme.colors.text.primary};
 `;
 
 const WarnWrapper = styled.View`
@@ -53,13 +53,13 @@ const WarnTextWrapper = styled.View`
 
 const WarnText = styled.Text`
   text-align: center;
-  color: ${({ theme }) => theme.colors.secondaryText};
+  color: ${({ theme }) => theme.colors.text.secondary};
   font-size: 13px;
 `;
 
 const BalloutBoxWrapper = styled.View`
   height: 130px;
-  background-color: ${({ theme }) => theme.colors.secondaryText};
+  background-color: ${({ theme }) => theme.colors.text.secondary};
   border-top-width: 1px;
   border-top-color: rgba(68, 148, 211, 0.1);
 `;

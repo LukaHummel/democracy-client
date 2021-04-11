@@ -19,7 +19,7 @@ const InfoIcon = styled(SvgInfo).attrs(() => ({
   height: 18,
   color: 'rgb(199, 199, 204)',
 }))`
-  margin-left: ${({ theme }) => theme.paddings.outer};
+  margin-left: ${({ theme }) => theme.spaces.default};
 `;
 
 const DeputyDetailsWrapper = styled.View`
@@ -62,7 +62,7 @@ const Text = styled.Text`
 `;
 
 const TextLighGrey = styled(Text)`
-  color: ${({ theme }) => theme.colors.secondaryText};
+  color: ${({ theme }) => theme.colors.text.secondary};
 `;
 
 const Decision = styled.Text<{ decision: string | null }>`

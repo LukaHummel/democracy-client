@@ -10,15 +10,15 @@ const Wrapper = styled.View`
 
 const Header = styled.TouchableOpacity`
   flex-direction: row;
-  padding-vertical: ${({ theme }) => theme.paddings.outer};
-  padding-horizontal: ${({ theme }) => theme.paddings.outer};
+  padding-vertical: ${({ theme }) => theme.spaces.default};
+  padding-horizontal: ${({ theme }) => theme.spaces.default};
 `;
 
 const Headline = styled.Text`
   flex: 1;
   font-size: 17px;
-  margin-right: ${({ theme }) => theme.paddings.outer};
-  color: ${({ theme }) => theme.colors.primaryText};
+  margin-right: ${({ theme }) => theme.spaces.default};
+  color: ${({ theme }) => theme.colors.text.primary};
 `;
 
 interface CollapseIconProps extends SvgProps {
@@ -26,7 +26,7 @@ interface CollapseIconProps extends SvgProps {
 }
 
 const CollapseIcon = styled(SvgArrow).attrs(({ theme }) => ({
-  color: theme.colors.secondaryText,
+  color: theme.colors.text.secondary,
   width: 20,
   height: 20,
 }))<CollapseIconProps>`
@@ -35,7 +35,7 @@ const CollapseIcon = styled(SvgArrow).attrs(({ theme }) => ({
 `;
 
 const Content = styled.View`
-  padding-bottom: ${({ theme }) => theme.paddings.outer};
+  padding-bottom: ${({ theme }) => theme.spaces.default};
 `;
 
 interface Props {

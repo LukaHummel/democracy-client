@@ -10,12 +10,12 @@ import { ListItemSeperator } from 'components/ListItem/components/ListItemSepera
 
 const Wrapper = styled.View`
   flex: 1;
-  background-color: ${({ theme }) => theme.backgroundColor};
+  background-color: ${({ theme }) => theme.colors.background.primary};
 `;
 
 const List = styled(FlatList as new () => FlatList<Procedure>)`
   flex: 1;
-  background-color: ${({ theme }) => theme.backgroundColor};
+  background-color: ${({ theme }) => theme.colors.background.primary};
 `;
 
 export const WomBundestagScreen: React.FC = () => {

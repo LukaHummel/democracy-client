@@ -30,7 +30,7 @@ const DueDate = styled.Text`
 
 const Description = styled.Text`
   font-size: 13px;
-  color: ${({ theme }) => theme.colors.primaryColoredText};
+  color: ${({ theme }) => theme.colors.text.colored};
 `;
 
 interface Props {

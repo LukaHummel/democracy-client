@@ -81,7 +81,7 @@ export const GovernmentPieChart: React.FC<Props> = ({
     return path;
   });
 
-  const votedColors = themeContext.colors.governmentVotes;
+  const votedColors = themeContext.colors.vote.government;
 
   const colorRange = [votedColors.yes, votedColors.abstination, votedColors.no];
 

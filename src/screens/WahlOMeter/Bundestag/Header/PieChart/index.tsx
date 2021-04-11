@@ -63,21 +63,18 @@ export const WomBundestagPieChart: React.FC<Props> = ({ localVotes }) => {
     );
   }, [data, localVotes]);
 
-  const colors = [
-    theme.colors.womCharts.matching,
-    theme.colors.womCharts.notMatching,
-  ];
+  const colors = [theme.colors.vote.wom.match, theme.colors.vote.wom.missmatch];
 
   const legendData: ChartLegendData[] = [
     {
       label: 'Übereinstimmungen',
       value: chartData.matches,
-      color: theme.colors.womCharts.matching,
+      color: theme.colors.vote.wom.match,
     },
     {
       label: 'Differenzen',
       value: chartData.differences,
-      color: theme.colors.womCharts.notMatching,
+      color: theme.colors.vote.wom.missmatch,
     },
   ];
 

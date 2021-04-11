@@ -16,7 +16,7 @@ const Container = styled.View`
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  padding-top: ${({ theme }) => theme.paddings.outer};
+  padding-top: ${({ theme }) => theme.spaces.default};
 `;
 
 const VoteButtonWrapper = styled.View`
@@ -24,9 +24,9 @@ const VoteButtonWrapper = styled.View`
 `;
 
 const VoteButtonLabel = styled.Text`
-  padding-top: ${({ theme }) => theme.paddings.outer};
+  padding-top: ${({ theme }) => theme.spaces.default};
   font-size: 12px;
-  color: ${({ theme }) => theme.colors.secondaryText};
+  color: ${({ theme }) => theme.colors.text.secondary};
 `;
 
 const LockIconWrapper = styled.View`

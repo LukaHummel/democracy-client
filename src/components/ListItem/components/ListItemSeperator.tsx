@@ -3,7 +3,7 @@ import styled from 'styled-components/native';
 
 const View = styled.View`
   height: 1px;
-  background-color: ${({ theme }) => theme.colors.secondaryText};
+  background-color: ${({ theme }) => theme.colors.text.secondary};
   opacity: 0.3;
 `;
 

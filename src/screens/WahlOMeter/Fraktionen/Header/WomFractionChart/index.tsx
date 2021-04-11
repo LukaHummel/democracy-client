@@ -83,18 +83,18 @@ export const WomFractionChart: React.FC<Props> = ({ localVotes }) => {
     return <Placeholder style={{ height: size, width: size }} />;
   }
 
-  const votedColors = theme.colors.womCharts;
+  const votedColors = theme.colors.vote.wom;
 
   const chartLegendData: ChartLegendData[] = [
     {
       label: 'Übereinstimmungen',
       value: chartData[selectedParty].deviants.matches,
-      color: votedColors.matching,
+      color: votedColors.match,
     },
     {
       label: 'Differenzen',
       value: chartData[selectedParty].deviants.differences,
-      color: votedColors.notMatching,
+      color: votedColors.missmatch,
     },
   ];
 

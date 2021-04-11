@@ -10,7 +10,7 @@ import { FilterData, FilterEntry } from 'context/ListFilter/initData';
 import { Segment } from 'components/Segment';
 
 const Save = styled.TouchableOpacity`
-  margin-right: ${({ theme }) => theme.paddings.outer};
+  margin-right: ${({ theme }) => theme.spaces.default};
 `;
 
 const SaveText = styled.Text`
@@ -20,7 +20,7 @@ const SaveText = styled.Text`
 `;
 
 const Container = styled.View`
-  background-color: ${({ theme }) => theme.backgroundColor};
+  background-color: ${({ theme }) => theme.colors.background.primary};
 `;
 
 const ListRowMain = styled.View`
@@ -29,7 +29,7 @@ const ListRowMain = styled.View`
 `;
 
 const ListRowSub = styled.View`
-  padding-left: ${({ theme }) => theme.paddings.outer};
+  padding-left: ${({ theme }) => theme.spaces.default};
 `;
 
 const Row = styled.TouchableOpacity`
@@ -40,12 +40,12 @@ const Row = styled.TouchableOpacity`
 `;
 
 const TitleMain = styled.Text`
-  color: ${({ theme }) => theme.colors.primaryText};
+  color: ${({ theme }) => theme.colors.text.primary};
   font-size: 17px;
 `;
 
 const TitleSub = styled.Text`
-  color: ${({ theme }) => theme.colors.primaryText};
+  color: ${({ theme }) => theme.colors.text.primary};
   flex: 0.98;
   font-size: 15px;
 `;
@@ -177,7 +177,7 @@ export const FilterScreen: React.FC<Props> = ({ navigation }) => {
           const sectionValue = getValue({ type: name });
           const mainCheckboxColor = sectionValue
             ? '#1c659f'
-            : theme.colors.header;
+            : theme.colors.primary;
           return (
             <View>
               <Segment text={title} />
@@ -210,7 +210,7 @@ export const FilterScreen: React.FC<Props> = ({ navigation }) => {
           const sectionValue = getValue({ type: subName! });
           const mainCheckboxColor = sectionValue
             ? '#1c659f'
-            : theme.colors.header;
+            : theme.colors.primary;
           return (
             <ListRowMain>
               <ListRowSub key={subtitle}>

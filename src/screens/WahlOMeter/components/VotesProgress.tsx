@@ -10,7 +10,7 @@ const Container = styled.View`
 `;
 
 const Text = styled.Text`
-  color: ${({ theme }) => theme.colors.secondaryText};
+  color: ${({ theme }) => theme.colors.text.secondary};
   font-size: 15px;
 `;
 

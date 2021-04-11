@@ -27,7 +27,7 @@ export const FractionBar: React.FC<Props> = ({
   const total = sum([yes, abstination, no, notVoted]);
   const xScale = scaleLinear().domain([0, total]).range([0, width]);
 
-  const votedColors = themeContext.colors.governmentVotes;
+  const votedColors = themeContext.colors.vote.government;
 
   const deviantColorRange = scaleOrdinal<string>()
     .domain(['yes', 'abstination', 'no', 'notVoted'])
@@ -53,9 +53,7 @@ export const FractionBar: React.FC<Props> = ({
         y={height / 2 + 5}
         fontSize={14}
         textAnchor="end"
-        fill={
-          themeContext.colors.charts.piePercentage
-        }>{`${percentage}%`}</Text>
+        fill={themeContext.colors.text.tertiary}>{`${percentage}%`}</Text>
     );
   };
 

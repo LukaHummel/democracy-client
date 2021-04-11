@@ -11,8 +11,8 @@ import { PostVotedButtons } from './components/PostVotedButtons';
 import { filter } from 'graphql-anywhere';
 
 const Container = styled.View`
-  /* margin-top: ${({ theme }) => theme.paddings.outer}; */
-  margin-horizontal: ${({ theme }) => theme.paddings.outer};
+  /* margin-top: ${({ theme }) => theme.spaces.default}; */
+  margin-horizontal: ${({ theme }) => theme.spaces.default};
 `;
 
 const Title = styled.Text`

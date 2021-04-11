@@ -57,12 +57,12 @@ export const WomDeputyChart: React.FC<Props> = ({ procedures }) => {
   const legendData: ChartLegendData[] = [
     {
       label: 'Übereinstimmungen',
-      color: theme.colors.womCharts.matching,
+      color: theme.colors.vote.wom.match,
       value: data.matches,
     },
     {
       label: 'Differenzen',
-      color: theme.colors.womCharts.notMatching,
+      color: theme.colors.vote.wom.missmatch,
       value: data.differences,
     },
   ];

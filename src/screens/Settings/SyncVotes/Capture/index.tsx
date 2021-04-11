@@ -29,7 +29,7 @@ const Text = styled.Text`
   padding-bottom: 18px;
   text-align: center;
   font-weight: bold;
-  color: ${({ theme }) => theme.colors.primaryColoredText};
+  color: ${({ theme }) => theme.colors.text.colored};
 `;
 
 const SpinnerContainer = styled.View`
@@ -43,7 +43,7 @@ const SpinnerContainer = styled.View`
 const Spinner = styled(ActivityIndicator)``;
 
 const TextRed = styled(Text)`
-  color: ${({ theme }) => theme.colors.primaryColoredText};
+  color: ${({ theme }) => theme.colors.text.colored};
 `;
 
 const Camera = styled(RNCamera)`
@@ -138,7 +138,7 @@ export const CaptureSyncVotes: React.FC<Props> = ({ navigation }) => {
           />
           {data.length > 0 && (
             <SpinnerContainer>
-              <Spinner size="large" color={theme.colors.primaryText} />
+              <Spinner size="large" color={theme.colors.text.primary} />
             </SpinnerContainer>
           )}
         </>

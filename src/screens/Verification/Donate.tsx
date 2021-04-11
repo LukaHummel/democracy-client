@@ -12,7 +12,7 @@ import { VerificationStackParamList } from 'navigation/verification';
 
 const SAV = styled.SafeAreaView`
   flex: 1;
-  background-color: ${({ theme }) => theme.backgroundColor};
+  background-color: ${({ theme }) => theme.colors.background.primary};
 `;
 
 const Container = styled.ScrollView.attrs(() => ({
@@ -33,7 +33,7 @@ const Container = styled.ScrollView.attrs(() => ({
 `;
 
 const TextHead = styled.Text`
-  color: ${({ theme }) => theme.colors.primaryText};
+  color: ${({ theme }) => theme.colors.text.primary};
   font-size: 22px;
   padding-top: 25px;
   text-align: center;
@@ -52,7 +52,7 @@ const TextCenter = styled.Text`
   align-content: center;
   justify-content: space-between;
   flex: 1;
-  color: ${({ theme }) => theme.colors.secondaryText};
+  color: ${({ theme }) => theme.colors.text.secondary};
   font-size: 17px;
   padding-top: 50px;
   font-family: ${Platform.OS === 'ios'

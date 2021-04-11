@@ -27,11 +27,11 @@ export const FractionBar: React.FC<Props> = ({
   const total = sum([matches, differences]);
   const xScale = scaleLinear().domain([0, total]).range([0, width]);
 
-  const votedColors = themeContext.colors.womCharts;
+  const votedColors = themeContext.colors.vote.wom;
 
   const deviantColorRange = scaleOrdinal<string>()
     .domain(['matches', 'differences'])
-    .range([votedColors.matching, votedColors.notMatching]);
+    .range([votedColors.match, votedColors.missmatch]);
 
   const xDifferences = xScale(matches) || 0;
 
@@ -46,9 +46,7 @@ export const FractionBar: React.FC<Props> = ({
         y={height / 2 + 5}
         fontSize={14}
         textAnchor="end"
-        fill={
-          themeContext.colors.charts.piePercentage
-        }>{`${percentage}%`}</Text>
+        fill={themeContext.colors.text.tertiary}>{`${percentage}%`}</Text>
     );
   };
 

@@ -25,12 +25,12 @@ const VoteResultCircleNumber = styled.View`
 `;
 
 const VoteResultNumber = styled.Text`
-  color: ${({ theme }) => theme.colors.secondaryText};
+  color: ${({ theme }) => theme.colors.text.secondary};
   font-size: 12px;
   padding-top: 1px;
 `;
 const VoteResultLabel = styled.Text`
-  color: ${({ theme }) => theme.colors.secondaryText};
+  color: ${({ theme }) => theme.colors.text.secondary};
   font-size: 12px;
   padding-top: 6px;
 `;

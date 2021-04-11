@@ -3,18 +3,18 @@ import React from 'react';
 import styled from 'styled-components/native';
 
 const Wrapper = styled.TouchableOpacity`
-  background-color: ${({ theme }) => theme.backgroundColor};
+  background-color: ${({ theme }) => theme.colors.background.primary};
   align-items: center;
   padding-top: 11px;
   height: 50px;
 `;
 
 const Text = styled.Text`
-  color: ${({ theme }) => theme.colors.secondaryText};
+  color: ${({ theme }) => theme.colors.text.secondary};
 `;
 
 const LinkColorText = styled.Text`
-  color: ${({ theme }) => theme.colors.primaryColoredText};
+  color: ${({ theme }) => theme.colors.text.colored};
 `;
 
 export const MadeWithLove: React.FC = () => (

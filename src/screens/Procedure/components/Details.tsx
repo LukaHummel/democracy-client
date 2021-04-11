@@ -5,8 +5,8 @@ import styled from 'styled-components/native';
 import { ProcedureDetailsFragment } from 'generated/graphql';
 
 const Wrapper = styled.View`
-  padding-horizontal: ${({ theme }) => theme.paddings.outer};
-  padding-vertical: ${({ theme }) => theme.paddings.outer};
+  padding-horizontal: ${({ theme }) => theme.spaces.default};
+  padding-vertical: ${({ theme }) => theme.spaces.default};
 `;
 
 const Head = styled.View`
@@ -33,11 +33,11 @@ const HeadRightDescr = styled.View`
 const DefTitle = styled.Text`
   font-size: 14px;
   /* color: rgba(68, 148, 211, 0.9); */
-  color: ${({ theme }) => theme.colors.primaryColoredText};
+  color: ${({ theme }) => theme.colors.text.colored};
 `;
 
 const DefTitleSeperated = styled(DefTitle)`
-  padding-top: ${({ theme }) => theme.paddings.outer};
+  padding-top: ${({ theme }) => theme.spaces.default};
 `;
 
 const DefTitleRight = styled(DefTitle)`
@@ -46,7 +46,7 @@ const DefTitleRight = styled(DefTitle)`
 
 const DefDescr = styled.Text`
   font-size: 14px;
-  color: ${({ theme }) => theme.colors.primaryText};
+  color: ${({ theme }) => theme.colors.text.primary};
 `;
 
 const Content = styled.View`
@@ -55,7 +55,7 @@ const Content = styled.View`
 
 const ContentText = styled(DefDescr)`
   font-size: 14px;
-  color: ${({ theme }) => theme.colors.primaryText};
+  color: ${({ theme }) => theme.colors.text.primary};
 `;
 
 const renderType = (type: string) => {

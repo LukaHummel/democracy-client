@@ -7,7 +7,7 @@ import { DefaultSlide } from './components/defaultSlide';
 
 const Container = styled(SafeAreaView)`
   flex: 1;
-  background-color: ${({ theme }) => theme.backgroundColor};
+  background-color: ${({ theme }) => theme.colors.background.primary};
 `;
 
 interface Props {
@@ -20,7 +20,7 @@ const BottomButtonWrapper = styled.View`
 `;
 
 const Button = styled.Text`
-  color: ${({ theme }) => theme.primaryColor};
+  color: ${({ theme }) => theme.colors.primary};
   font-size: 18px;
   padding-vertical: 12px;
 `;

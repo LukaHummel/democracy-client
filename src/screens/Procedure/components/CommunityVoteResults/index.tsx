@@ -14,7 +14,7 @@ import { ConstituencyContext } from 'context/constituency';
 
 const Container = styled(Carousel).attrs(({ theme }) => ({
   activeDotStyle: {
-    backgroundColor: theme.colors.primaryText,
+    backgroundColor: theme.colors.text.primary,
     width: 8,
     height: 8,
     marginLeft: 3,
@@ -34,7 +34,7 @@ const Container = styled(Carousel).attrs(({ theme }) => ({
     alignItems: 'center',
   },
   dotStyle: {
-    backgroundColor: theme.colors.secondaryText,
+    backgroundColor: theme.colors.text.secondary,
     width: 8,
     height: 8,
     marginLeft: 3,
@@ -47,7 +47,7 @@ const Container = styled(Carousel).attrs(({ theme }) => ({
 const Description = styled.Text`
   align-self: center;
   text-align: center;
-  color: ${({ theme }) => theme.colors.secondaryText};
+  color: ${({ theme }) => theme.colors.text.secondary};
   font-size: 12px;
 `;
 
@@ -62,9 +62,13 @@ export const CommuntiyVoteResults: React.FC<Props> = ({
   const { constituency } = useContext(ConstituencyContext);
   const { width } = useWindowDimensions();
 
-  const { voted: votedColors } = theme.colors.communityVotes;
+  const { community: communityVotedColors } = theme.colors.vote;
 
-  const colorRange = [votedColors.yes, votedColors.abstination, votedColors.no];
+  const colorRange = [
+    communityVotedColors.yes,
+    communityVotedColors.abstination,
+    communityVotedColors.no,
+  ];
 
   if (communityVotes?.total === undefined) {
     return null;
@@ -104,9 +108,9 @@ export const CommuntiyVoteResults: React.FC<Props> = ({
   const colorGenerator = scaleLinear()
     .domain([-1, 0, 1])
     .range([
-      (theme.colors.communityVotes.voted.no as unknown) as number,
-      (theme.colors.communityVotes.voted.abstination as unknown) as number,
-      (theme.colors.communityVotes.voted.yes as unknown) as number,
+      (theme.colors.vote.community.no as unknown) as number,
+      (theme.colors.vote.community.abstination as unknown) as number,
+      (theme.colors.vote.community.yes as unknown) as number,
     ]);
 
   const charts: any[] = [];

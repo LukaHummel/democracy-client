@@ -4,14 +4,14 @@ import { Procedure, ProcedureHistoryFragment } from 'generated/graphql';
 import Folding from 'components/Folding';
 
 const Container = styled.View`
-  /* margin-top: ${({ theme }) => theme.paddings.outer}; */
-  margin-horizontal: ${({ theme }) => theme.paddings.outer};
+  /* margin-top: ${({ theme }) => theme.spaces.default}; */
+  margin-horizontal: ${({ theme }) => theme.spaces.default};
 `;
 
 const StateWrapper = styled.View`
   flex-direction: row;
   align-items: center;
-  padding-vertical: ${({ theme }) => theme.paddings.outer};
+  padding-vertical: ${({ theme }) => theme.spaces.default};
 `;
 
 interface IconProps {
@@ -28,15 +28,15 @@ const Icon = styled.View<IconProps>`
       return '#9b9b9b';
     }
     return currentStatus === state
-      ? theme.colors.header
-      : theme.colors.primaryText;
+      ? theme.colors.primary
+      : theme.colors.text.primary;
   }};
 `;
 
 const State = styled.Text`
   font-size: 13px;
-  padding-left: ${({ theme }) => theme.paddings.outer};
-  color: ${({ theme }) => theme.colors.secondaryText};
+  padding-left: ${({ theme }) => theme.spaces.default};
+  color: ${({ theme }) => theme.colors.text.secondary};
 `;
 
 const Line = styled.View`

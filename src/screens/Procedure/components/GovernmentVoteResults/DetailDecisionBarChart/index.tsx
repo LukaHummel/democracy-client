@@ -34,7 +34,7 @@ export const DetailDecisionBarChart: React.FC<Props> = ({
     return null;
   }
 
-  const votedColors = themeContext.colors.governmentVotes;
+  const votedColors = themeContext.colors.vote.government;
 
   const decisionData = voteResults.partyVotes.reduce<DecitionChartData>(
     (prev, { deviants, party }) => {

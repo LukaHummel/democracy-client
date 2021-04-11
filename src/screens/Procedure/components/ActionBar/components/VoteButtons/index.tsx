@@ -7,7 +7,7 @@ import styled from 'styled-components/native';
 import VoteButton from './VoteButton';
 
 const Container = styled.View`
-  padding-vertical: ${({ theme }) => theme.paddings.outer};
+  padding-vertical: ${({ theme }) => theme.spaces.default};
   flex-direction: row;
   justify-content: space-around;
 `;
@@ -17,9 +17,9 @@ const VoteButtonWrapper = styled.View`
 `;
 
 const VoteButtonLabel = styled.Text`
-  padding-top: ${({ theme }) => theme.paddings.outer};
+  padding-top: ${({ theme }) => theme.spaces.default};
   font-size: 12px;
-  color: ${({ theme }) => theme.colors.secondaryText};
+  color: ${({ theme }) => theme.colors.text.secondary};
 `;
 
 type VoteVerificationScreenNavigationProp = StackNavigationProp<

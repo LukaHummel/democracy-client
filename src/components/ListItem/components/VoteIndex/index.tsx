@@ -6,7 +6,7 @@ interface Props extends VoteIndexFragment {}
 
 const Number = styled.Text<Pick<Props, 'voted'>>`
   color: ${({ voted, theme }) =>
-    voted ? theme.colors.primaryColoredText : theme.colors.secondaryText};
+    voted ? theme.colors.text.colored : theme.colors.text.secondary};
   font-weight: bold;
 `;
 

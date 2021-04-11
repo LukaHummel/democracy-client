@@ -39,13 +39,13 @@ const website = 'https://www.democracy-deutschland.de/';
 const Wrapper = styled.ScrollView.attrs({
   scrollIndicatorInsets: { right: 1 }, // TODO do cleanfix when there is a correct solution (already closed but not solved without workaround) https://github.com/facebook/react-native/issues/26610
 })`
-  background-color: ${({ theme }) => theme.backgroundColor};
+  background-color: ${({ theme }) => theme.colors.background.primary};
 `;
 
 const Headline = styled.Text`
   padding-horizontal: 18px;
   padding-vertical: 18px;
-  color: ${({ theme }) => theme.colors.secondaryText};
+  color: ${({ theme }) => theme.colors.text.secondary};
   font-size: 15px;
 `;
 
@@ -73,7 +73,7 @@ const IconWrapper = styled.TouchableOpacity`
   border-radius: 33px;
   justify-content: center;
   align-items: center;
-  border-color: ${({ theme }) => theme.colors.secondaryText};
+  border-color: ${({ theme }) => theme.colors.text.secondary};
 `;
 
 const Spacer = styled.View`
@@ -89,19 +89,19 @@ const Markdown: React.FC<MarkdownProps> = ({ children, styles = {} }) => {
   const markdownStyles = deepmerge(
     {
       paragraph: {
-        color: theme.colors.secondaryText,
+        color: theme.colors.text.secondary,
         ...(styles.paragraph || []),
       },
       listItemUnorderedContent: {
-        color: theme.colors.secondaryText,
+        color: theme.colors.text.secondary,
         ...(styles.listItemUnorderedContent || []),
       },
       listItemBullet: {
-        color: theme.colors.secondaryText,
+        color: theme.colors.text.secondary,
         ...(styles.listItemBullet || []),
       },
       link: {
-        color: theme.colors.primaryColoredText,
+        color: theme.colors.text.colored,
         ...(styles.link || []),
       },
     },
@@ -158,14 +158,18 @@ Bitte gib uns möglichst viele Informationen zu den von Dir gefunden Fehlern ode
       <Spacer />
       <ContactWrapper>
         <IconWrapper onPress={linking(phoneNumber)}>
-          <SvgPhone color={theme.colors.secondaryText} width={30} height={30} />
+          <SvgPhone
+            color={theme.colors.text.secondary}
+            width={30}
+            height={30}
+          />
         </IconWrapper>
         <IconWrapper onPress={linking(email)}>
-          <SvgMail color={theme.colors.secondaryText} width={30} height={30} />
+          <SvgMail color={theme.colors.text.secondary} width={30} height={30} />
         </IconWrapper>
         <IconWrapper onPress={linking(website)}>
           <SvgPlanet
-            color={theme.colors.secondaryText}
+            color={theme.colors.text.secondary}
             width={30}
             height={30}
           />
@@ -174,21 +178,21 @@ Bitte gib uns möglichst viele Informationen zu den von Dir gefunden Fehlern ode
       <SocialMediaWrapper>
         <IconWrapper onPress={linking(github)}>
           <SvgGithub
-            color={theme.colors.secondaryText}
+            color={theme.colors.text.secondary}
             width={30}
             height={30}
           />
         </IconWrapper>
         <IconWrapper onPress={linking(twitter)}>
           <SvgTwitter
-            color={theme.colors.secondaryText}
+            color={theme.colors.text.secondary}
             width={30}
             height={30}
           />
         </IconWrapper>
         <IconWrapper onPress={linking(facebook)}>
           <SvgFacebook
-            color={theme.colors.secondaryText}
+            color={theme.colors.text.secondary}
             width={30}
             height={30}
           />
@@ -197,21 +201,21 @@ Bitte gib uns möglichst viele Informationen zu den von Dir gefunden Fehlern ode
       <SocialMediaWrapper>
         <IconWrapper onPress={linking(instagram)}>
           <SvgInstagram
-            color={theme.colors.secondaryText}
+            color={theme.colors.text.secondary}
             width={30}
             height={30}
           />
         </IconWrapper>
         <IconWrapper onPress={linking(youtube)}>
           <SvgYoutube
-            color={theme.colors.secondaryText}
+            color={theme.colors.text.secondary}
             width={30}
             height={30}
           />
         </IconWrapper>
         <IconWrapper onPress={linking(discord)}>
           <SvgDiscord
-            color={theme.colors.secondaryText}
+            color={theme.colors.text.secondary}
             width={30}
             height={30}
           />

@@ -29,8 +29,8 @@ export const DecisionBar: React.FC<Props> = ({
     FDP,
     Linke,
     Grüne,
-    fraktionslos,
-  } = theme.colors.fractions;
+    ohne: fraktionslos,
+  } = theme.colors.party;
   const backgroundColorRange = scaleOrdinal<string>()
     .domain(['Union', 'SPD', 'AfD', 'FDP', 'Linke', 'Grüne', 'fraktionslos'])
     .range([

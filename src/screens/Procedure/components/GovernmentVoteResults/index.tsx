@@ -21,7 +21,7 @@ import { ConstituencyContext } from 'context/constituency';
 
 const Container = styled(Carousel).attrs(({ theme }) => ({
   activeDotStyle: {
-    backgroundColor: theme.colors.primaryText,
+    backgroundColor: theme.colors.text.primary,
     width: 8,
     height: 8,
     marginLeft: 3,
@@ -41,7 +41,7 @@ const Container = styled(Carousel).attrs(({ theme }) => ({
     alignItems: 'center',
   },
   dotStyle: {
-    backgroundColor: theme.colors.secondaryText,
+    backgroundColor: theme.colors.text.secondary,
     width: 8,
     height: 8,
     marginLeft: 3,
@@ -54,12 +54,12 @@ const Container = styled(Carousel).attrs(({ theme }) => ({
 const Description = styled.Text`
   align-self: center;
   text-align: center;
-  color: ${({ theme }) => theme.colors.secondaryText};
+  color: ${({ theme }) => theme.colors.text.secondary};
   font-size: 12px;
 `;
 
 const Highlighted = styled(Description)`
-  color: ${({ theme }) => theme.colors.primaryText};
+  color: ${({ theme }) => theme.colors.text.primary};
 `;
 
 interface Props {

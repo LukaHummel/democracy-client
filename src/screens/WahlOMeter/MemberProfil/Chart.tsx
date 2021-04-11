@@ -22,7 +22,7 @@ const ProcedureCountText = styled.Text`
 
 const Label = styled.Text`
   font-size: 17px;
-  color: ${({ theme }) => theme.colors.secondaryText};
+  color: ${({ theme }) => theme.colors.text.secondary};
 `;
 
 interface Props {

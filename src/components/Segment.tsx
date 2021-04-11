@@ -5,12 +5,12 @@ const SegmentWrapper = styled.View`
   padding-vertical: 5px;
   padding-horizontal: 18px;
   flex-direction: row;
-  background-color: ${({ theme }) => theme.colors.header};
+  background-color: ${({ theme }) => theme.colors.primary};
   align-items: center;
 `;
 
 const Text = styled.Text`
-  color: ${({ theme }) => theme.colors.primaryText};
+  color: ${({ theme }) => theme.colors.text.primary};
 `;
 
 interface Props {

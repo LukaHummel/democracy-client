@@ -15,7 +15,7 @@ const Container = styled.View`
   align-items: center;
   justify-content: center;
   flex: 1;
-  padding-horizontal: ${({ theme }) => theme.paddings.outer};
+  padding-horizontal: ${({ theme }) => theme.spaces.default};
 `;
 
 export const DetailVoteResultConstituency: React.FC<Props> = (props) => {

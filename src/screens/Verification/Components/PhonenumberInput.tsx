@@ -4,7 +4,7 @@ import styled from 'styled-components/native';
 
 const Container = styled.View`
   border-bottom-width: 1px;
-  border-color: ${({ theme }) => theme.colors.secondaryText};
+  border-color: ${({ theme }) => theme.colors.text.secondary};
   padding-bottom: 0;
   flex-direction: row;
   margin-horizontal: 9px;
@@ -13,7 +13,7 @@ const Container = styled.View`
 
 const CountryNumber = styled.Text`
   font-size: 24px;
-  color: ${({ theme }) => theme.colors.primaryText};
+  color: ${({ theme }) => theme.colors.text.primary};
   margin-bottom: 0;
   padding-bottom: 0;
   padding-top: ${Platform.OS === 'ios' ? 0 : '7px'};
@@ -27,7 +27,7 @@ const Number = styled.TextInput.attrs(() => ({
 }))`
   flex: 1;
   font-size: 24px;
-  color: ${({ theme }) => theme.colors.primaryText};
+  color: ${({ theme }) => theme.colors.text.primary};
   margin-bottom: 0;
   padding-bottom: 0;
   margin-left: 11px;

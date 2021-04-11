@@ -13,7 +13,7 @@ import styled, { useTheme } from 'styled-components/native';
 const Wrapper = styled.ScrollView.attrs({
   scrollIndicatorInsets: { right: 1 }, // TODO do cleanfix when there is a correct solution (already closed but not solved without workaround) https://github.com/facebook/react-native/issues/26610
 })`
-  background-color: ${({ theme }) => theme.backgroundColor};
+  background-color: ${({ theme }) => theme.colors.background.primary};
 `;
 
 const Content = styled.View`
@@ -31,12 +31,12 @@ const QuotWrapper = styled.View`
 
 const Quot = styled.Text`
   font-size: 100px;
-  color: ${({ theme }) => theme.colors.header};
+  color: ${({ theme }) => theme.colors.primary};
   top: -18px;
 `;
 
 const Text = styled.Text`
-  color: ${({ theme }) => theme.colors.primaryText};
+  color: ${({ theme }) => theme.colors.text.primary};
 `;
 
 interface MarkdownProps {
@@ -53,11 +53,11 @@ const Markdown: React.FC<MarkdownProps> = ({
   const markdownStyles = deepmerge(
     {
       paragraph: {
-        color: theme.colors.secondaryText,
+        color: theme.colors.text.secondary,
         ...(styles.paragraph || []),
       },
       link: {
-        color: theme.colors.primaryColoredText,
+        color: theme.colors.text.colored,
         ...(styles.link || []),
       },
     },

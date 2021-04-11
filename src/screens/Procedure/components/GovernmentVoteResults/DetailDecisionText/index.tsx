@@ -8,17 +8,17 @@ const Container = styled.View`
   align-items: center;
   justify-content: center;
   flex: 1;
-  padding-horizontal: ${({ theme }) => theme.paddings.outer};
+  padding-horizontal: ${({ theme }) => theme.spaces.default};
 `;
 
 const Headline = styled.Text`
   font-size: 18px;
-  color: ${({ theme }) => theme.colors.primaryText};
-  padding-bottom: ${({ theme }) => theme.paddings.outer};
+  color: ${({ theme }) => theme.colors.text.primary};
+  padding-bottom: ${({ theme }) => theme.spaces.default};
 `;
 
 const Text = styled.Text`
-  color: ${({ theme }) => theme.colors.secondaryText};
+  color: ${({ theme }) => theme.colors.text.secondary};
   text-align: center;
 `;
 

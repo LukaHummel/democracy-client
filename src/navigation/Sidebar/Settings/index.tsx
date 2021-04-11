@@ -38,12 +38,12 @@ export const SettingsRootNavigation = () => {
     <SettingsRootStack.Navigator
       screenOptions={{
         headerStyle: {
-          backgroundColor: theme.colors.header,
+          backgroundColor: theme.colors.primary,
           elevation: 0,
           shadowOpacity: 0,
         },
         headerBackTitleVisible: false,
-        headerTintColor: theme.colors.primaryText,
+        headerTintColor: theme.colors.text.primary,
       }}>
       <SettingsRootStack.Screen
         name="Settings"
@@ -52,7 +52,7 @@ export const SettingsRootNavigation = () => {
           title: 'Settings',
           headerTintColor: '#fff',
           headerStyle: {
-            backgroundColor: theme.colors.header,
+            backgroundColor: theme.colors.primary,
             elevation: 0,
             shadowOpacity: 0,
           },

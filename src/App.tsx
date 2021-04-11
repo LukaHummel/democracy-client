@@ -2,7 +2,7 @@ import React from 'react';
 // import 'lib/wdyr';
 import { Navigation } from './navigation';
 import { InstructionsProvider } from './context/instructions';
-import { lightTheme, darkTheme } from './styles/theme';
+import { lightTheme, darkTheme } from '@democracy-deutschland/ui-test';
 import { ThemeProvider } from 'styled-components';
 import { useColorScheme } from 'react-native';
 import { ApolloProvider } from '@apollo/client';

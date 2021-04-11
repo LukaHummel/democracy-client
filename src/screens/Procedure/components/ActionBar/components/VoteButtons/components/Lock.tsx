@@ -3,7 +3,7 @@ import styled from 'styled-components/native';
 
 const LockText = styled.Text`
   font-size: 60px;
-  color: ${({ theme }) => theme.colors.secondaryText};
+  color: ${({ theme }) => theme.colors.text.secondary};
   font-weight: 200;
 `;
 

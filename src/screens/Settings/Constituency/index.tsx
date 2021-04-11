@@ -13,12 +13,12 @@ import { ConstituencyContext } from 'context/constituency';
 
 const Wrapper = styled.View`
   flex: 1;
-  background-color: ${({ theme }) => theme.backgroundColor};
+  background-color: ${({ theme }) => theme.colors.background.primary};
 `;
 
 const SearchBox = styled.View`
   height: 44px;
-  background-color: ${({ theme }) => theme.colors.header};
+  background-color: ${({ theme }) => theme.colors.primary};
 `;
 
 const SearchInputWrapper = styled.View`
@@ -65,7 +65,7 @@ const Plz = styled.Text.attrs({
   numberOfLines: 1,
 })`
   font-size: 15px;
-  color: ${({ theme }) => theme.colors.secondaryText};
+  color: ${({ theme }) => theme.colors.text.secondary};
 `;
 
 const Row = styled.TouchableOpacity`

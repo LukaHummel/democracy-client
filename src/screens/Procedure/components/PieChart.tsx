@@ -6,8 +6,8 @@ import { G, Text, Svg, Path } from 'react-native-svg';
 import { getTheme } from 'styles/theme';
 
 const Container = styled.View`
-  margin-horizontal: ${({ theme }) => theme.paddings.outer};
-  margin-vertical: ${({ theme }) => theme.paddings.outer};
+  margin-horizontal: ${({ theme }) => theme.spaces.default};
+  margin-vertical: ${({ theme }) => theme.spaces.default};
   align-items: center;
 `;
 
@@ -20,7 +20,7 @@ const TopContainere = styled.View`
 `;
 
 const TopLeftText = styled.Text`
-  color: ${({ theme }) => theme.colors.secondaryText};
+  color: ${({ theme }) => theme.colors.text.secondary};
 `;
 
 interface ChartEntry {
@@ -117,7 +117,7 @@ export const PieChart: React.FC<Props> = ({
                       transform={{ translate: textTransform }}
                       fontSize={'18'}
                       textAnchor="middle"
-                      fill={getTheme().colors.primaryText}>
+                      fill={getTheme().colors.text.primary}>
                       {`${percentage}%`}
                     </Text>
                   )}
@@ -131,14 +131,14 @@ export const PieChart: React.FC<Props> = ({
             y={-4}
             fontSize="18"
             textAnchor="middle"
-            fill={getTheme().colors.primaryText}>
+            fill={getTheme().colors.text.primary}>
             {innerTextTop}
           </Text>
           <Text
             y={15}
             fontSize="14"
             textAnchor="middle"
-            fill={getTheme().colors.primaryText}>
+            fill={getTheme().colors.text.primary}>
             {innerTextBottom}
           </Text>
         </G>

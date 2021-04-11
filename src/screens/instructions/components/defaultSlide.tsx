@@ -13,18 +13,18 @@ const Container = styled.View`
 `;
 
 const HeadImage = styled.Image`
-  tint-color: ${({ theme }) => theme.primaryColor};
+  tint-color: ${({ theme }) => theme.colors.primary};
 `;
 
 const TextHead = styled.Text`
-  color: ${({ theme }) => theme.primaryColor};
+  color: ${({ theme }) => theme.colors.primary};
   font-size: 22px;
   padding-top: 15px;
   text-align: center;
 `;
 
 const TextSub = styled.Text`
-  color: ${({ theme }) => theme.primaryColor};
+  color: ${({ theme }) => theme.colors.primary};
   font-size: 15px;
   padding-top: 3px;
   margin-bottom: 18px;

@@ -7,7 +7,7 @@ import { SearchContext } from 'context/Search';
 import { useFinishSearchMutation } from 'generated/graphql';
 
 const Wrapper = styled.View`
-  background-color: ${({ theme }) => theme.colors.header};
+  background-color: ${({ theme }) => theme.colors.primary};
 `;
 
 interface Props {
@@ -45,7 +45,7 @@ export const SearchHeader: React.FC<Props> = ({ searchBarRef }) => {
         onSearchButtonPress={finishSearch}
         showsCancelButton={false}
         showsCancelButtonWhileEditing={false}
-        textFieldBackgroundColor={theme.backgroundColor}
+        textFieldBackgroundColor={theme.colors.background.primary}
         hideBackground
       />
     </Wrapper>

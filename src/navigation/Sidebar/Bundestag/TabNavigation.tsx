@@ -16,12 +16,12 @@ const Navigator = styled(Tab.Navigator).attrs(({ theme }) => ({
   tabBarOptions: {
     scrollEnabled: false,
     indicatorStyle: {
-      backgroundColor: theme.colors.white,
+      backgroundColor: theme.colors.secondary,
     },
-    activeTintColor: theme.colors.white,
-    inactiveTintColor: theme.colors.white,
+    activeTintColor: theme.colors.secondary,
+    inactiveTintColor: theme.colors.secondary,
     style: {
-      backgroundColor: theme.colors.header,
+      backgroundColor: theme.colors.primary,
     },
     labelStyle: {
       fontSize: 12,

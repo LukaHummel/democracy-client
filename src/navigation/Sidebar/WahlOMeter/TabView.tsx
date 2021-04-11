@@ -36,12 +36,12 @@ const TabViewNavigation: React.FC<Props> = () => {
       tabBarOptions={{
         scrollEnabled: false,
         indicatorStyle: {
-          backgroundColor: getTheme().colors.primaryText,
+          backgroundColor: getTheme().colors.text.primary,
         },
-        activeTintColor: getTheme().colors.primaryText,
-        inactiveTintColor: getTheme().colors.secondaryText,
+        activeTintColor: getTheme().colors.text.primary,
+        inactiveTintColor: getTheme().colors.text.secondary,
         style: {
-          backgroundColor: theme.colors.header,
+          backgroundColor: theme.colors.primary,
         },
       }}
       initialRouteName={'Bundestag'}>

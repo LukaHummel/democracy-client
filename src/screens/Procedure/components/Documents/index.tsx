@@ -9,7 +9,7 @@ import { filter } from 'graphql-anywhere';
 import Folding from 'components/Folding';
 
 const Container = styled.View`
-  padding-horizontal: ${({ theme }) => theme.paddings.outer};
+  padding-horizontal: ${({ theme }) => theme.spaces.default};
 `;
 
 interface Props extends ImportantDocumentsFragment {}

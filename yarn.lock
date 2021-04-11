@@ -964,10 +964,10 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@democracy-deutschland/ui-test@0.0.1-alpha.6":
-  version "0.0.1-alpha.6"
-  resolved "https://registry.yarnpkg.com/@democracy-deutschland/ui-test/-/ui-test-0.0.1-alpha.6.tgz#bd50f8c312b2e1e010b2ae49198b2b926fec7094"
-  integrity sha512-SNua6P8xui+JO8XyY86pF97RBPrLLWZBbc0HDXogsKpWsOSDp1TLerLcOaje4fFrG9J264rDoX6/aJ49JdMYyw==
+"@democracy-deutschland/ui-test@0.0.1-alpha.9":
+  version "0.0.1-alpha.9"
+  resolved "https://registry.yarnpkg.com/@democracy-deutschland/ui-test/-/ui-test-0.0.1-alpha.9.tgz#e0610c52f95a1edeac7052105a33eac8ad240863"
+  integrity sha512-+/RXXWdUpnIHAlCXuvYDQ0kY4BKciN9QLXls6o5mc6H1yoom+ezelh+HPc92ete9icLme2jbGr3IeO17UnnZig==
 
 "@egjs/hammerjs@^2.0.17":
   version "2.0.17"

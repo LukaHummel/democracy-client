@@ -24,7 +24,7 @@ const Container = styled.KeyboardAvoidingView.attrs(() => ({
   keyboardVerticalOffset: 100,
   // enabled: true,
 }))`
-  background-color: ${({ theme }) => theme.backgroundColor};
+  background-color: ${({ theme }) => theme.colors.background.primary};
   flex: 1;
 `;
 

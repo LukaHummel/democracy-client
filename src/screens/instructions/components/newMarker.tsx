@@ -4,6 +4,6 @@ export const NewMarker = styled.Image.attrs({
   source: require('../assets/icon.new.png'),
 })`
   position: absolute;
-  top: ${({ theme }) => theme.paddings.outer};
-  left: ${({ theme }) => theme.paddings.outer};
+  top: ${({ theme }) => theme.spaces.default};
+  left: ${({ theme }) => theme.spaces.default};
 `;

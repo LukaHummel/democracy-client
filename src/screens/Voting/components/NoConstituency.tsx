@@ -31,7 +31,7 @@ const PieChartWrapper = styled.View`
 
 const Text = styled.Text`
   font-size: 13px;
-  color: ${({ theme }) => theme.colors.secondaryText};
+  color: ${({ theme }) => theme.colors.text.secondary};
   text-align: center;
   padding-horizontal: 18px;
 `;

@@ -24,12 +24,12 @@ type NavigationProp = StackNavigationProp<
 
 const LoadingContainer = styled.View`
   flex: 1;
-  background-color: ${({ theme }) => theme.backgroundColor};
+  background-color: ${({ theme }) => theme.colors.background.primary};
 `;
 
 const Container = styled(FlatList as new () => FlatList<Procedure>)`
   flex: 1;
-  background-color: ${({ theme }) => theme.backgroundColor};
+  background-color: ${({ theme }) => theme.colors.background.primary};
 `;
 
 type Props = {};

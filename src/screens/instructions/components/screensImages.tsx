@@ -54,7 +54,10 @@ const TextVerify = styled.Text`
 `;
 
 const Gradient = styled(LinearGradient).attrs(({ theme }) => ({
-  colors: [`${theme.backgroundColor}0`, theme.backgroundColor],
+  colors: [
+    `${theme.colors.background.primary}0`,
+    theme.colors.background.primary,
+  ],
   start: { x: 1, y: 0 },
   end: { x: 1, y: 0.9 },
 }))`

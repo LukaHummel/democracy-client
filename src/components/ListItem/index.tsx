@@ -11,8 +11,8 @@ import { VoteDate } from './components/VoteDate/VoteDate';
 
 const Container = styled.View`
   flex-direction: row;
-  padding-horizontal: ${({ theme }) => theme.paddings.outer};
-  padding-vertical: ${({ theme }) => theme.paddings.outer};
+  padding-horizontal: ${({ theme }) => theme.spaces.default};
+  padding-vertical: ${({ theme }) => theme.spaces.default};
 `;
 
 const TextContainer = styled.View`
@@ -22,13 +22,13 @@ const TextContainer = styled.View`
 
 const Title = styled.Text`
   font-size: 17px;
-  color: ${({ theme }) => theme.colors.primaryText};
+  color: ${({ theme }) => theme.colors.text.primary};
 `;
 
 const Subline = styled.Text`
   padding-top: 8px;
   font-size: 15px;
-  color: ${({ theme }) => theme.colors.secondaryText};
+  color: ${({ theme }) => theme.colors.text.secondary};
 `;
 
 const SideContainer = styled.View`

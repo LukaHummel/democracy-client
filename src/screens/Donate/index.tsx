@@ -37,7 +37,7 @@ const ScrollWrapper = styled.ScrollView.attrs({
   scrollIndicatorInsets: { right: 1 }, // TODO do cleanfix when there is a correct solution (already closed but not solved without workaround) https://github.com/facebook/react-native/issues/26610
 })`
   flex: 1;
-  background-color: ${({ theme }) => theme.backgroundColor};
+  background-color: ${({ theme }) => theme.colors.background.primary};
 `;
 
 const Wrapper = styled.View`
@@ -49,13 +49,13 @@ const Wrapper = styled.View`
 const Headline = styled.Text`
   font-weight: bold;
   font-size: 15px;
-  color: ${({ theme }) => theme.colors.secondaryText};
+  color: ${({ theme }) => theme.colors.text.secondary};
   padding-bottom: 6px;
 `;
 
 const Text = styled.Text`
   font-size: 15px;
-  color: ${({ theme }) => theme.colors.secondaryText};
+  color: ${({ theme }) => theme.colors.text.secondary};
 `;
 
 const TextLink = styled.Text`
@@ -66,7 +66,7 @@ const TextLink = styled.Text`
 
 const Version = styled.Text`
   font-size: 15px;
-  color: ${({ theme }) => theme.colors.secondaryText};
+  color: ${({ theme }) => theme.colors.text.secondary};
   padding-top: 28px;
   padding-bottom: 11px;
   text-align: center;
@@ -80,12 +80,12 @@ const DefinitionListWrapper = styled.View`
 const DefinitionListTitle = styled.Text`
   width: 30%;
   font-weight: 600;
-  color: ${({ theme }) => theme.colors.secondaryText};
+  color: ${({ theme }) => theme.colors.text.secondary};
 `;
 
 const DefinitionListDescription = styled.Text`
   width: 70%;
-  color: ${({ theme }) => theme.colors.secondaryText};
+  color: ${({ theme }) => theme.colors.text.secondary};
 `;
 
 interface Props {

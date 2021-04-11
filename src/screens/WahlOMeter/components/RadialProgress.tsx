@@ -5,8 +5,8 @@ import { PieArcDatum } from 'd3-shape';
 import { G, Svg, Path } from 'react-native-svg';
 
 const Container = styled.View`
-  margin-horizontal: ${({ theme }) => theme.paddings.outer};
-  margin-vertical: ${({ theme }) => theme.paddings.outer};
+  margin-horizontal: ${({ theme }) => theme.spaces.default};
+  margin-vertical: ${({ theme }) => theme.spaces.default};
   align-items: center;
 `;
 
@@ -29,7 +29,7 @@ export const RadialProgress: React.FC<Props> = ({ percentage, size }) => {
   const chartSize = size - size / 5;
 
   const dataLabels = ['complete', 'incomplete'];
-  const colors = [theme.colors.primaryColoredText, theme.colors.secondaryText];
+  const colors = [theme.colors.text.colored, theme.colors.text.secondary];
 
   const preparedData = [
     {

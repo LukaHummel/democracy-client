@@ -40,7 +40,7 @@ type ProfileScreenNavigationProps = StackNavigationProp<
 
 const Container = styled.ScrollView`
   flex: 1;
-  background-color: ${({ theme }) => theme.backgroundColor};
+  background-color: ${({ theme }) => theme.colors.background.primary};
 `;
 
 type Props = {
