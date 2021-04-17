@@ -1,7 +1,7 @@
 import { scaleLinear, scaleOrdinal } from 'd3';
 import React, { useContext } from 'react';
 import { G, Rect, Text } from 'react-native-svg';
-import { ThemeContext } from 'styled-components';
+import { ThemeContext } from 'styled-components/native';
 import { DecitionBarPart } from '.';
 
 interface Props {

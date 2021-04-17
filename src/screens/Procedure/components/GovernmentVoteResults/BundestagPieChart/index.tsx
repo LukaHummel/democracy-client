@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { PieChart } from '../../PieChart';
 import { ChartLegend, ChartLegendData } from 'components/Charts/ChartLegend';
 import { DetailGovernmentPieChartFragment } from 'generated/graphql';
-import { ThemeContext } from 'styled-components';
+import { ThemeContext } from 'styled-components/native';
 import { ActivityIndicator } from 'react-native';
 
 interface Props extends DetailGovernmentPieChartFragment {

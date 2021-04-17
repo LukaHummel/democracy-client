@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import Svg, { Path } from 'react-native-svg';
-import { ThemeContext } from 'styled-components';
+import { ThemeContext } from 'styled-components/native';
 
 interface Props {
   width: number;

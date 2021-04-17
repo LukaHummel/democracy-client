@@ -2,7 +2,7 @@ import React, { useContext, useMemo, useState } from 'react';
 import styled, { ThemeContext } from 'styled-components/native';
 import { CommunityVotesPieChartFragment } from 'generated/graphql';
 import { LocalVotesContext } from 'context/LocalVotes';
-import { PieChart, ChartEntry } from '@democracy-deutschland/ui-test';
+import { PieChart, ChartEntry } from '@democracy-deutschland/ui';
 
 const Container = styled.View`
   width: 20px;

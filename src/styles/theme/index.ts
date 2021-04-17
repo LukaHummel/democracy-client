@@ -1,4 +1,4 @@
-import { darkTheme, lightTheme } from '@democracy-deutschland/ui-test';
+import { darkTheme, lightTheme } from '@democracy-deutschland/ui';
 import { Appearance } from 'react-native';
 
 interface FractionColor {

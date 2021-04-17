@@ -10,12 +10,12 @@
     "lint": "yarn lint:ts && yarn lint:es",
     "lint:ts": "tsc --noEmit",
     "lint:es": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "lint:exports": "ts-unused-exports ./tsconfig.json --excludePathsFromReport=generated --excludePathsFromReport=assets/svgs/constituencies",
+    "lint:exports": "ts-unused-exports ./tsconfig.json --excludePathsFromReport=generated --excludePathsFromReport=assets/svgs",
     "generate": "graphql-codegen --config codegen.yml"
   },
   "dependencies": {
     "@apollo/client": "^3.3.4",
-    "@democracy-deutschland/ui-test": "0.0.1-alpha.9",
+    "@democracy-deutschland/ui": "0.0.3-alpha.11",
     "@react-native-community/art": "^1.2.0",
     "@react-native-community/async-storage": "^1.12.0",
     "@react-native-community/masked-view": "^0.1.10",
@@ -63,7 +63,7 @@
     "react-native-tab-view": "^2.15.1",
     "rn-fetch-blob": "^0.12.0",
     "speakingurl": "^14.0.1",
-    "styled-components": "^5.2.0",
+    "styled-components": "^5.2.3",
     "victory-native": "^35.0.1"
   },
   "devDependencies": {

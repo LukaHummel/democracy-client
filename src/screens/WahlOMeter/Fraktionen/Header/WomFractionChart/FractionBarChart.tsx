@@ -1,7 +1,7 @@
 import { scaleBand } from 'd3';
 import React, { useContext } from 'react';
 import Svg, { G, Rect, Text } from 'react-native-svg';
-import { ThemeContext } from 'styled-components';
+import { ThemeContext } from 'styled-components/native';
 import { BarData, FractionBar } from './FractionBar';
 
 export interface WomPartyChartData {

@@ -8,7 +8,7 @@ import { getTheme } from 'styles/theme';
 import { WomBundestagScreen } from 'screens/WahlOMeter/Bundestag';
 import { WomPartyScreen } from 'screens/WahlOMeter/Fraktionen';
 import { WomConstituencyScreen } from 'screens/WahlOMeter/Wahlkreis';
-import { useTheme } from 'styled-components';
+import { useTheme } from 'styled-components/native';
 
 export type TopTabParamList = {
   Bundestag: undefined;
