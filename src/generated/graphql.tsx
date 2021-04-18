@@ -495,6 +495,18 @@ export type VoteIndexFragment = (
   & Pick<Procedure, 'votes' | 'voted'>
 );
 
+export type ProcedureListItemFragment = (
+  { __typename?: 'Procedure' }
+  & Pick<Procedure, 'procedureId' | 'title' | 'sessionTOPHeading' | 'voted' | 'votes' | 'voteDate' | 'voteEnd'>
+  & { communityVotes?: Maybe<(
+    { __typename?: 'CommunityVotes' }
+    & Pick<CommunityVotes, 'yes' | 'abstination' | 'no'>
+  )>, voteResults?: Maybe<(
+    { __typename?: 'VoteResult' }
+    & Pick<VoteResult, 'yes' | 'abstination' | 'no' | 'notVoted'>
+  )> }
+);
+
 export type MeQueryVariables = Exact<{ [key: string]: never; }>;
 
 
@@ -989,6 +1001,28 @@ export const ListItemFragmentDoc = gql`
 }
     ${VoteIndexFragmentDoc}
 ${VoteDateFragmentDoc}`;
+export const ProcedureListItemFragmentDoc = gql`
+    fragment ProcedureListItem on Procedure {
+  procedureId
+  title
+  sessionTOPHeading
+  voted
+  votes
+  communityVotes {
+    yes
+    abstination
+    no
+  }
+  voteDate
+  voteEnd
+  voteResults {
+    yes
+    abstination
+    no
+    notVoted
+  }
+}
+    `;
 export const DetailGovernmentPieChartFragmentDoc = gql`
     fragment DetailGovernmentPieChart on Procedure {
   procedureId

@@ -2,14 +2,14 @@ import React, { useCallback, useContext, useState } from 'react';
 import { ActivityIndicator, FlatList, ListRenderItem } from 'react-native';
 import styled from 'styled-components/native';
 import { useProceduresListQuery, Procedure } from 'generated/graphql';
-import { RouteProp, useRoute } from '@react-navigation/native';
+import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
 import { BundestagTabNavigatorParamList } from 'navigation/Sidebar/Bundestag/TabNavigation';
 import { BundestagStackNavigatorParamList } from 'navigation/Sidebar/Bundestag';
 import { ListItemSeperator } from 'components/ListItem/components/ListItemSeperator';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { NetworkStatus } from '@apollo/client';
 import { ListFilterContext } from 'context/ListFilter';
-import { ProcedureListItem } from './ListItem';
+import { ProcedureListItem } from '../../components/ProcedureListItem';
 import { ListItemContentLoader } from 'components/ListItem/ContentLoader';
 
 type ProfileScreenRouteProp = RouteProp<
@@ -32,10 +32,13 @@ const Container = styled(FlatList as new () => FlatList<Procedure>)`
   background-color: ${({ theme }) => theme.colors.background.primary};
 `;
 
+const Link = styled.TouchableOpacity``;
+
 type Props = {};
 
 export const ProcedureList: React.FC<Props> = () => {
   const route = useRoute<ProfileScreenRouteProp>();
+  const { navigate } = useNavigation<NavigationProp>();
   const [hasMoreData, setHasMoreData] = useState(true);
   const { proceduresFilter } = useContext(ListFilterContext);
 
@@ -71,9 +74,22 @@ export const ProcedureList: React.FC<Props> = () => {
     }
   }, [currentProcedureLength, fetchMore, hasMoreData, loading]);
 
-  const renderItem: ListRenderItem<Procedure> = useCallback(({ item }) => {
-    return <ProcedureListItem {...item} />;
-  }, []);
+  const renderItem: ListRenderItem<Procedure> = useCallback(
+    ({ item }) => {
+      return (
+        <Link
+          onPress={() =>
+            navigate('Procedure', {
+              procedureId: item.procedureId,
+              title: item.title,
+            })
+          }>
+          <ProcedureListItem {...item} />
+        </Link>
+      );
+    },
+    [navigate],
+  );
 
   const renderListFooterComponent = useCallback(() => {
     if (loading) {

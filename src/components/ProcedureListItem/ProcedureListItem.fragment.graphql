@@ -1,0 +1,20 @@
+fragment ProcedureListItem on Procedure {
+  procedureId
+  title
+  sessionTOPHeading
+  voted
+  votes
+  communityVotes {
+    yes
+    abstination
+    no
+  }
+  voteDate
+  voteEnd
+  voteResults {
+    yes
+    abstination
+    no
+    notVoted
+  }
+}

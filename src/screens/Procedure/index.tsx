@@ -1,23 +1,18 @@
 import { RouteProp } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
-import { ListItem } from 'components/ListItem';
 import { ListItemSeperator } from 'components/ListItem/components/ListItemSeperator';
 import {
-  ListItemFragmentDoc,
   useProcedureDetailQuery,
-  CommunityVotesPieChartFragmentDoc,
-  GovernmentVotesPieChartFragmentDoc,
   ProcedureDetailsFragmentDoc,
   ImportantDocumentsFragmentDoc,
   ProcedureHistoryFragmentDoc,
   DetailActionBarFragmentDoc,
   CommunityVoteResultsFragmentDoc,
+  ProcedureListItemFragmentDoc,
 } from 'generated/graphql';
 import { filter } from 'graphql-anywhere';
 import { BundestagStackNavigatorParamList } from 'navigation/Sidebar/Bundestag';
 import React, { useEffect } from 'react';
-import { CommunityPieChart } from 'screens/ProcedureList/components/CommunityPieChart';
-import { GovernmentPieChart } from 'screens/ProcedureList/components/GovernmentPieChart';
 import styled from 'styled-components/native';
 import { CommuntiyVoteResults } from './components/CommunityVoteResults';
 import { ProcedureDetails } from './components/Details';
@@ -27,6 +22,7 @@ import { RefreshControl, SafeAreaView } from 'react-native';
 import { GovernmentVoteResults } from './components/GovernmentVoteResults';
 import { NetworkStatus } from '@apollo/client';
 import { ActionBar } from './components/ActionBar';
+import { ProcedureListItem } from 'components/ProcedureListItem';
 
 type ProfileScreenRouteProp = RouteProp<
   BundestagStackNavigatorParamList,
@@ -80,18 +76,9 @@ export const ProcedureDetailScreen: React.FC<Props> = ({
         <RefreshControl refreshing={refreshing} onRefresh={refetch} />
       }>
       <SafeAreaView>
-        <ListItem
-          {...filter(ListItemFragmentDoc, procedure)}
-          renderPieCharts={[
-            <GovernmentPieChart
-              key={`government-piechart-${procedure.procedureId}`}
-              {...filter(GovernmentVotesPieChartFragmentDoc, procedure)}
-            />,
-            <CommunityPieChart
-              key={`community-piechart-${procedure.procedureId}`}
-              {...filter(CommunityVotesPieChartFragmentDoc, procedure)}
-            />,
-          ]}
+        <ProcedureListItem
+          {...filter(ProcedureListItemFragmentDoc, procedure)}
+          isIntro
         />
         <ListItemSeperator />
         <ProcedureDetails {...filter(ProcedureDetailsFragmentDoc, procedure)} />
