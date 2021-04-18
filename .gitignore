@@ -62,10 +62,10 @@ buck-out/
 # CocoaPods
 /ios/Pods/
 
-
 # Custom
 google-services.json
 .env.*
 !.env.*.gpg
 ios/*.app.dSYM.zip
 ios/*.p8
+!.env.STAGE.example
