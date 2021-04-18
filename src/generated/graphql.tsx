@@ -871,25 +871,6 @@ export type WomFractionChartQuery = (
   ) }
 );
 
-export type WomPartyListQueryVariables = Exact<{
-  pageSize?: Maybe<Scalars['Int']>;
-  offset?: Maybe<Scalars['Int']>;
-}>;
-
-
-export type WomPartyListQuery = (
-  { __typename?: 'Query' }
-  & { womPartyList: (
-    { __typename?: 'ProceduresHavingVoteResults' }
-    & { procedures: Array<(
-      { __typename?: 'Procedure' }
-      & ListItemFragment
-      & CommunityVotesPieChartFragment
-      & GovernmentVotesPieChartFragment
-    )> }
-  ) }
-);
-
 export type GetDeputyProfileQueryVariables = Exact<{
   constituency: Scalars['String'];
   directCandidate?: Maybe<Scalars['Boolean']>;
@@ -1726,49 +1707,6 @@ export function useWomFractionChartLazyQuery(baseOptions?: Apollo.LazyQueryHookO
 export type WomFractionChartQueryHookResult = ReturnType<typeof useWomFractionChartQuery>;
 export type WomFractionChartLazyQueryHookResult = ReturnType<typeof useWomFractionChartLazyQuery>;
 export type WomFractionChartQueryResult = Apollo.QueryResult<WomFractionChartQuery, WomFractionChartQueryVariables>;
-export const WomPartyListDocument = gql`
-    query WomPartyList($pageSize: Int, $offset: Int) {
-  womPartyList: proceduresByIdHavingVoteResults(
-    pageSize: $pageSize
-    offset: $offset
-  ) {
-    procedures {
-      ...ListItem
-      ...CommunityVotesPieChart
-      ...GovernmentVotesPieChart
-    }
-  }
-}
-    ${ListItemFragmentDoc}
-${CommunityVotesPieChartFragmentDoc}
-${GovernmentVotesPieChartFragmentDoc}`;
-
-/**
- * __useWomPartyListQuery__
- *
- * To run a query within a React component, call `useWomPartyListQuery` and pass it any options that fit your needs.
- * When your component renders, `useWomPartyListQuery` returns an object from Apollo Client that contains loading, error, and data properties
- * you can use to render your UI.
- *
- * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
- *
- * @example
- * const { data, loading, error } = useWomPartyListQuery({
- *   variables: {
- *      pageSize: // value for 'pageSize'
- *      offset: // value for 'offset'
- *   },
- * });
- */
-export function useWomPartyListQuery(baseOptions?: Apollo.QueryHookOptions<WomPartyListQuery, WomPartyListQueryVariables>) {
-        return Apollo.useQuery<WomPartyListQuery, WomPartyListQueryVariables>(WomPartyListDocument, baseOptions);
-      }
-export function useWomPartyListLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<WomPartyListQuery, WomPartyListQueryVariables>) {
-          return Apollo.useLazyQuery<WomPartyListQuery, WomPartyListQueryVariables>(WomPartyListDocument, baseOptions);
-        }
-export type WomPartyListQueryHookResult = ReturnType<typeof useWomPartyListQuery>;
-export type WomPartyListLazyQueryHookResult = ReturnType<typeof useWomPartyListLazyQuery>;
-export type WomPartyListQueryResult = Apollo.QueryResult<WomPartyListQuery, WomPartyListQueryVariables>;
 export const GetDeputyProfileDocument = gql`
     query GetDeputyProfile($constituency: String!, $directCandidate: Boolean) {
   deputiesOfConstituency(

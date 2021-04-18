@@ -1,12 +1,12 @@
 import React, { createContext, useState } from 'react';
 
 interface WomPartyInterface {
-  party: string;
-  setWomParty: (party: string) => void;
+  party: number;
+  setWomParty: (party: number) => void;
 }
 
 const defaults: WomPartyInterface = {
-  party: '',
+  party: 0,
   setWomParty: () => {
     throw new Error('WomPartyContext: setWomParty function is not defined');
   },
@@ -15,7 +15,7 @@ const defaults: WomPartyInterface = {
 export const WomPartyContext = createContext<WomPartyInterface>(defaults);
 
 export const WomPartyProvider: React.FC = ({ children }) => {
-  const [party, setWomParty] = useState('');
+  const [party, setWomParty] = useState(0);
 
   return (
     <WomPartyContext.Provider

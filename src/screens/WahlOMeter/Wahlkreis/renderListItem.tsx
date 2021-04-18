@@ -1,8 +1,10 @@
+import { ProcedureListItem } from 'components/ProcedureListItem';
 import {
   CommunityVotesPieChartFragmentDoc,
   GovernmentVotesPieChartFragmentDoc,
   ListItemFragmentDoc,
   Procedure,
+  ProcedureListItemFragmentDoc,
 } from 'generated/graphql';
 import { filter } from 'graphql-anywhere';
 import React from 'react';
@@ -29,6 +31,7 @@ export const renderItem: ({
           title: item.title,
         })
       }>
+      <ProcedureListItem {...filter(ProcedureListItemFragmentDoc, item)} />
       <ListItem
         {...filter(ListItemFragmentDoc, item)}
         renderPieCharts={[

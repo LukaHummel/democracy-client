@@ -7,6 +7,7 @@ import { ChartLegendData } from '../../../../../components/Charts/ChartLegend';
 import { useWindowDimensions } from 'react-native';
 import { ChartNote } from 'screens/WahlOMeter/components/ChartNote';
 import { VotesProgress } from 'screens/WahlOMeter/components/VotesProgress';
+import { WomPartyContext } from '../../context';
 
 const ChartWrapper = styled.View`
   align-self: center;
@@ -27,6 +28,7 @@ const Placeholder = styled.ActivityIndicator``;
 
 export const WomFractionChart: React.FC<Props> = ({ localVotes }) => {
   const [selectedParty, setSelectedParty] = useState(0);
+  const { setWomParty } = useContext(WomPartyContext);
   const { width, height } = useWindowDimensions();
   const { data } = useWomFractionChartQuery({
     variables: {
@@ -108,7 +110,10 @@ export const WomFractionChart: React.FC<Props> = ({ localVotes }) => {
         <FractionBarChart
           data={chartData}
           size={size - 48}
-          setSelectedParty={setSelectedParty}
+          setSelectedParty={(i) => {
+            setSelectedParty(i);
+            setWomParty(i);
+          }}
           selectedParty={selectedParty}
         />
       </ChartWrapper>

@@ -6,19 +6,16 @@ import { StackNavigationProp } from '@react-navigation/stack';
 import SearchBar from 'react-native-search-bar';
 import { BundestagStackNavigatorParamList } from 'navigation/Sidebar/Bundestag';
 import {
-  CommunityVotesPieChartFragmentDoc,
-  GovernmentVotesPieChartFragmentDoc,
   Procedure,
+  ProcedureListItemFragmentDoc,
   useFinishSearchMutation,
   useMostSearchedQuery,
   useSearchProceduresLazyQuery,
 } from 'generated/graphql';
 import { SearchContext } from 'context/Search';
-import { ListItem } from 'components/ListItem';
 import { Segment } from 'components/Segment';
-import { GovernmentPieChart } from 'screens/ProcedureList/components/GovernmentPieChart';
-import { CommunityPieChart } from 'screens/ProcedureList/components/CommunityPieChart';
 import { filter } from 'graphql-anywhere';
+import { ProcedureListItem } from 'components/ProcedureListItem';
 
 const isProcedureGuard = (
   searchItem: string | Procedure,
@@ -177,22 +174,8 @@ export const Results: React.FC<Props> = ({ searchBarRef }) => {
             <Row onPress={onItemClick({ item, section: title })}>
               <>
                 {title === 'Ergebnisse' && isProcedureGuard(item) && (
-                  <ListItem
-                    {...item}
-                    sessionTOPHeading={item.sessionTOPHeading}
-                    votes={
-                      item.communityVotes ? item.communityVotes.total || 0 : 0
-                    }
-                    renderPieCharts={[
-                      <GovernmentPieChart
-                        key={`government-piechart-${item.procedureId}`}
-                        {...filter(GovernmentVotesPieChartFragmentDoc, item)}
-                      />,
-                      <CommunityPieChart
-                        key={`community-piechart-${item.procedureId}`}
-                        {...filter(CommunityVotesPieChartFragmentDoc, item)}
-                      />,
-                    ]}
+                  <ProcedureListItem
+                    {...filter(ProcedureListItemFragmentDoc, item)}
                   />
                 )}
                 {title === 'Zuletzt gesucht' && <ListText>{item}</ListText>}

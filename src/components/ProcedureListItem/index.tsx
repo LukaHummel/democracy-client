@@ -8,7 +8,10 @@ import { useTheme } from 'styled-components/native';
 import { LocalVotesContext } from 'context/LocalVotes';
 
 export const ProcedureListItem: React.FC<
-  ProcedureListItemFragment & { isIntro?: boolean }
+  ProcedureListItemFragment & {
+    isIntro?: boolean;
+    governmentChartData?: ChartEntry[];
+  }
 > = React.memo(
   ({
     procedureId,
@@ -20,6 +23,7 @@ export const ProcedureListItem: React.FC<
     voteDate,
     voteEnd,
     voteResults,
+    governmentChartData: governmentChartDataProp,
     ...props
   }) => {
     const theme = useTheme();
@@ -78,15 +82,13 @@ export const ProcedureListItem: React.FC<
       ],
     );
 
-    const governmentChartData = useMemo(
-      () =>
-        voteResults
-          ? ([
-              'YES',
-              'ABSTINATION',
-              'NO',
-              'NOT_VOTED',
-            ] as const).map<ChartEntry>((decision) => {
+    const governmentChartData = useMemo(() => {
+      if (governmentChartDataProp) {
+        return governmentChartDataProp;
+      }
+      return voteResults
+        ? (['YES', 'ABSTINATION', 'NO', 'NOT_VOTED'] as const).map<ChartEntry>(
+            (decision) => {
               switch (decision) {
                 case 'YES':
                   return {
@@ -114,10 +116,17 @@ export const ProcedureListItem: React.FC<
                     color: theme.colors.vote.government.notVoted,
                   };
               }
-            })
-          : undefined,
-      [voteResults, theme],
-    );
+            },
+          )
+        : undefined;
+    }, [
+      governmentChartDataProp,
+      voteResults,
+      theme.colors.vote.government.yes,
+      theme.colors.vote.government.abstination,
+      theme.colors.vote.government.no,
+      theme.colors.vote.government.notVoted,
+    ]);
 
     return (
       <ProcedureListItemCmp

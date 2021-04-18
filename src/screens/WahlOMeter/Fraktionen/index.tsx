@@ -7,6 +7,7 @@ import { useNavigation } from '@react-navigation/native';
 import { renderItem } from 'screens/WahlOMeter/Fraktionen/renderListItem';
 import { NetworkStatus } from '@apollo/client';
 import { ListItemSeperator } from 'components/ListItem/components/ListItemSeperator';
+import { WomPartyProvider } from './context';
 
 const Wrapper = styled.View`
   flex: 1;
@@ -19,6 +20,14 @@ const List = styled(FlatList as new () => FlatList<Procedure>)`
 `;
 
 export const WomPartyScreen: React.FC = () => {
+  return (
+    <WomPartyProvider>
+      <WomPartyScreenCmp />
+    </WomPartyProvider>
+  );
+};
+
+export const WomPartyScreenCmp: React.FC = () => {
   const navigation = useNavigation();
   const [hasMoreData, setHasMoreData] = useState(true);
   const {
