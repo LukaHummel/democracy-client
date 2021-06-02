@@ -21,6 +21,8 @@
 		7B305EA43801CA47E24897BB /* libPods-client-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 800B846E030BA5F3D2716867 /* libPods-client-tvOS.a */; };
 		C346941624BCB3BE000E06B7 /* push.aiff in Resources */ = {isa = PBXBuildFile; fileRef = C346941524BCB3BE000E06B7 /* push.aiff */; };
 		C374DDF5622B4B45A4A53805 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E3003AE1E3714904AE002B63 /* libz.tbd */; };
+		C3AD001E2668140E002DF103 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD001D2668140E002DF103 /* Dynamic.swift */; };
+		C3AD001F2668140E002DF103 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD001D2668140E002DF103 /* Dynamic.swift */; };
 		D8910E8C116A66280AEE4712 /* libPods-client-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 93635B3EDA508CCA6C584E30 /* libPods-client-tvOSTests.a */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +96,9 @@
 		AC508905CE66CED9AD6EFD7A /* Pods-client-tvOSTests.release.internal.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-client-tvOSTests.release.internal.xcconfig"; path = "Target Support Files/Pods-client-tvOSTests/Pods-client-tvOSTests.release.internal.xcconfig"; sourceTree = "<group>"; };
 		B11B71EBCB998E8B04E51A23 /* Pods-client-tvOSTests.alpha.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-client-tvOSTests.alpha.release.xcconfig"; path = "Target Support Files/Pods-client-tvOSTests/Pods-client-tvOSTests.alpha.release.xcconfig"; sourceTree = "<group>"; };
 		C346941524BCB3BE000E06B7 /* push.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = push.aiff; sourceTree = "<group>"; };
+		C3AD001B2668140D002DF103 /* client-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "client-Bridging-Header.h"; sourceTree = "<group>"; };
+		C3AD001C2668140E002DF103 /* client-tvOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "client-tvOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		C3AD001D2668140E002DF103 /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
 		C3E62E2E23D1A19E00EF5CA1 /* DEMOCRACY.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = DEMOCRACY.entitlements; path = client/DEMOCRACY.entitlements; sourceTree = "<group>"; };
 		C59B06D6F7200441822ACAC7 /* libPods-client.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-client.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C60E57A4C64E8D422333D24D /* Pods-clientTests.internal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clientTests.internal.debug.xcconfig"; path = "Target Support Files/Pods-clientTests/Pods-clientTests.internal.debug.xcconfig"; sourceTree = "<group>"; };
@@ -180,6 +185,9 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				C3AD001D2668140E002DF103 /* Dynamic.swift */,
+				C3AD001B2668140D002DF103 /* client-Bridging-Header.h */,
+				C3AD001C2668140E002DF103 /* client-tvOS-Bridging-Header.h */,
 			);
 			name = client;
 			sourceTree = "<group>";
@@ -383,11 +391,13 @@
 					};
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = A4B84UJD7M;
+						LastSwiftMigration = 1250;
 						ProvisioningStyle = Manual;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = A4B84UJD7M;
+						LastSwiftMigration = 1250;
 						ProvisioningStyle = Manual;
 					};
 					2D02E48F1E0B4A5D006451C7 = {
@@ -625,6 +635,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3AD001E2668140E002DF103 /* Dynamic.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
@@ -634,6 +645,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3AD001F2668140E002DF103 /* Dynamic.swift in Sources */,
 				2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */,
 				2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */,
 			);
@@ -679,6 +691,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 13DA10189BCB10FE64066558 /* Pods-clientTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				DEVELOPMENT_TEAM = A4B84UJD7M;
@@ -704,6 +717,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 199F69096DC7C58943C4B418 /* Pods-clientTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				COPY_PHASE_STRIP = NO;
@@ -728,11 +742,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_ID_SUFFIX = "";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = client/DEMOCRACY.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 242;
 				DEAD_CODE_STRIPPING = NO;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = A4B84UJD7M;
 				INFOPLIST_FILE = client/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -745,6 +761,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "de.democracy-deutschland.clientapp";
 				PRODUCT_NAME = DEMOCRACY;
 				PROVISIONING_PROFILE_SPECIFIER = "match Development de.democracy-deutschland.clientapp";
+				SWIFT_OBJC_BRIDGING_HEADER = "client-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -756,10 +775,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_ID_SUFFIX = "";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = client/DEMOCRACY.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 242;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = A4B84UJD7M;
 				INFOPLIST_FILE = client/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -772,6 +793,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "de.democracy-deutschland.clientapp";
 				PRODUCT_NAME = DEMOCRACY;
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore de.democracy-deutschland.clientapp";
+				SWIFT_OBJC_BRIDGING_HEADER = "client-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -784,6 +807,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -803,6 +827,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
+				SWIFT_OBJC_BRIDGING_HEADER = "client-tvOS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
 			};
@@ -815,6 +842,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -834,6 +862,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
+				SWIFT_OBJC_BRIDGING_HEADER = "client-tvOS-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
 			};
@@ -843,6 +873,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 12E1481623FB4BF952F06015 /* Pods-client-tvOSTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -871,6 +902,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7EC8D9696DEAEED3698AAE44 /* Pods-client-tvOSTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -1053,11 +1085,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon.internal;
 				BUNDLE_ID_SUFFIX = .internal;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = client/DEMOCRACY.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 242;
 				DEAD_CODE_STRIPPING = NO;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = A4B84UJD7M;
 				INFOPLIST_FILE = client/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1070,6 +1104,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "de.democracy-deutschland.clientapp.internal";
 				PRODUCT_NAME = DEMOCRACY;
 				PROVISIONING_PROFILE_SPECIFIER = "match Development de.democracy-deutschland.clientapp.internal";
+				SWIFT_OBJC_BRIDGING_HEADER = "client-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1079,6 +1116,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C60E57A4C64E8D422333D24D /* Pods-clientTests.internal.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				DEVELOPMENT_TEAM = A4B84UJD7M;
@@ -1107,6 +1145,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1126,6 +1165,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
+				SWIFT_OBJC_BRIDGING_HEADER = "client-tvOS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
 			};
@@ -1135,6 +1177,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D188EECBC43FD6D6F36A5567 /* Pods-client-tvOSTests.internal.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -1211,10 +1254,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon.internal;
 				BUNDLE_ID_SUFFIX = .internal;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = client/DEMOCRACY.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 242;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = A4B84UJD7M;
 				INFOPLIST_FILE = client/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1227,6 +1272,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "de.democracy-deutschland.clientapp.internal";
 				PRODUCT_NAME = DEMOCRACY;
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore de.democracy-deutschland.clientapp.internal";
+				SWIFT_OBJC_BRIDGING_HEADER = "client-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1236,6 +1283,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DB3A2C198E680606C8DD6880 /* Pods-clientTests.internal.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				COPY_PHASE_STRIP = NO;
@@ -1261,6 +1309,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1280,6 +1329,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
+				SWIFT_OBJC_BRIDGING_HEADER = "client-tvOS-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
 			};
@@ -1289,6 +1340,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 92AD68033DF1F344C0C6A5F1 /* Pods-client-tvOSTests.internal.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -1372,11 +1424,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon.refactor;
 				BUNDLE_ID_SUFFIX = .new;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = client/DEMOCRACY.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 242;
 				DEAD_CODE_STRIPPING = NO;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = A4B84UJD7M;
 				INFOPLIST_FILE = client/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1389,6 +1443,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "de.democracy-deutschland.clientapp.new";
 				PRODUCT_NAME = DEMOCRACY;
 				PROVISIONING_PROFILE_SPECIFIER = "match Development de.democracy-deutschland.clientapp.new";
+				SWIFT_OBJC_BRIDGING_HEADER = "client-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1398,6 +1455,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1ECCE87100F7837C40967434 /* Pods-clientTests.refactor.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				DEVELOPMENT_TEAM = A4B84UJD7M;
@@ -1426,6 +1484,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1445,6 +1504,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
+				SWIFT_OBJC_BRIDGING_HEADER = "client-tvOS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
 			};
@@ -1454,6 +1516,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 808E339C9E7749600F553D8E /* Pods-client-tvOSTests.refactor.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -1530,10 +1593,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon.refactor;
 				BUNDLE_ID_SUFFIX = .new;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = client/DEMOCRACY.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 242;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = A4B84UJD7M;
 				INFOPLIST_FILE = client/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1546,6 +1611,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "de.democracy-deutschland.clientapp.new";
 				PRODUCT_NAME = DEMOCRACY;
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore de.democracy-deutschland.clientapp.new";
+				SWIFT_OBJC_BRIDGING_HEADER = "client-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1555,6 +1622,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4298B2FF9129C796C4B65532 /* Pods-clientTests.refactor.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				COPY_PHASE_STRIP = NO;
@@ -1580,6 +1648,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1599,6 +1668,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
+				SWIFT_OBJC_BRIDGING_HEADER = "client-tvOS-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
 			};
@@ -1608,6 +1679,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FE4DE01F75C3FC47A6A0C4DE /* Pods-client-tvOSTests.refactor.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -1691,11 +1763,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon.alpha;
 				BUNDLE_ID_SUFFIX = .alpha;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = client/DEMOCRACY.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 242;
 				DEAD_CODE_STRIPPING = NO;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = A4B84UJD7M;
 				INFOPLIST_FILE = client/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1708,6 +1782,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "de.democracy-deutschland.clientapp.alpha";
 				PRODUCT_NAME = DEMOCRACY;
 				PROVISIONING_PROFILE_SPECIFIER = "match Development de.democracy-deutschland.clientapp.alpha";
+				SWIFT_OBJC_BRIDGING_HEADER = "client-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1717,6 +1794,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 18ED813865C95D0FA0057823 /* Pods-clientTests.alpha.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				DEVELOPMENT_TEAM = A4B84UJD7M;
@@ -1745,6 +1823,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1764,6 +1843,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
+				SWIFT_OBJC_BRIDGING_HEADER = "client-tvOS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
 			};
@@ -1773,6 +1855,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DA6D5E7D7D272FB873CFEAA8 /* Pods-client-tvOSTests.alpha.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -1849,10 +1932,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon.alpha;
 				BUNDLE_ID_SUFFIX = .alpha;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = client/DEMOCRACY.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 242;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = A4B84UJD7M;
 				INFOPLIST_FILE = client/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1865,6 +1950,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "de.democracy-deutschland.clientapp.alpha";
 				PRODUCT_NAME = DEMOCRACY;
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore de.democracy-deutschland.clientapp.alpha";
+				SWIFT_OBJC_BRIDGING_HEADER = "client-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1874,6 +1961,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 48316CF553F2BE85BB7C6A1A /* Pods-clientTests.alpha.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				COPY_PHASE_STRIP = NO;
@@ -1899,6 +1987,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1918,6 +2007,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
+				SWIFT_OBJC_BRIDGING_HEADER = "client-tvOS-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
 			};
@@ -1927,6 +2018,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B11B71EBCB998E8B04E51A23 /* Pods-client-tvOSTests.alpha.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -2010,11 +2102,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon.beta;
 				BUNDLE_ID_SUFFIX = .beta;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = client/DEMOCRACY.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 242;
 				DEAD_CODE_STRIPPING = NO;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = A4B84UJD7M;
 				INFOPLIST_FILE = client/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2027,6 +2121,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "de.democracy-deutschland.clientapp.beta";
 				PRODUCT_NAME = DEMOCRACY;
 				PROVISIONING_PROFILE_SPECIFIER = "match Development de.democracy-deutschland.clientapp.new";
+				SWIFT_OBJC_BRIDGING_HEADER = "client-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -2036,6 +2133,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 26499E46281C132EB90BD003 /* Pods-clientTests.beta.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				DEVELOPMENT_TEAM = A4B84UJD7M;
@@ -2064,6 +2162,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -2083,6 +2182,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
+				SWIFT_OBJC_BRIDGING_HEADER = "client-tvOS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
 			};
@@ -2092,6 +2194,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7905FA3AD822908E6B431B50 /* Pods-client-tvOSTests.beta.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -2168,10 +2271,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon.beta;
 				BUNDLE_ID_SUFFIX = .beta;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = client/DEMOCRACY.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 242;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = A4B84UJD7M;
 				INFOPLIST_FILE = client/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2184,6 +2289,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "de.democracy-deutschland.clientapp.beta";
 				PRODUCT_NAME = DEMOCRACY;
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore de.democracy-deutschland.clientapp.new";
+				SWIFT_OBJC_BRIDGING_HEADER = "client-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -2193,6 +2300,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6AF994A2537601DD2483C16C /* Pods-clientTests.beta.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				COPY_PHASE_STRIP = NO;
@@ -2218,6 +2326,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -2237,6 +2346,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
+				SWIFT_OBJC_BRIDGING_HEADER = "client-tvOS-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
 			};
@@ -2246,6 +2357,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D6147E2B226507697DE44637 /* Pods-client-tvOSTests.beta.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;

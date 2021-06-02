@@ -14557,6 +14557,11 @@ react-native-linear-gradient@^2.5.6:
   resolved "https://registry.yarnpkg.com/react-native-linear-gradient/-/react-native-linear-gradient-2.5.6.tgz#96215cbc5ec7a01247a20890888aa75b834d44a0"
   integrity sha512-HDwEaXcQIuXXCV70O+bK1rizFong3wj+5Q/jSyifKFLg0VWF95xh8XQgfzXwtq0NggL9vNjPKXa016KuFu+VFg==
 
+react-native-lottie-splash-screen@^0.1.14:
+  version "0.1.14"
+  resolved "https://vbg-frontend-dev-364050630688.d.codeartifact.eu-central-1.amazonaws.com:443/npm/vbg-npm-repo/react-native-lottie-splash-screen/-/react-native-lottie-splash-screen-0.1.14.tgz#b8168556c695524f85383ba07dfc979c17e3d6c8"
+  integrity sha512-Y81UHnvJy7/dbkmZv6M3q4nz8PG9cG7HqAfYhPC2+RG31/wqFsKzCnj+MLg6dGuCuUSuqJRIQUeM+S5GWNkOcA==
+
 "react-native-markdown-view@https://github.com/Benjamin-Dobell/react-native-markdown-view":
   version "1.1.4"
   resolved "https://github.com/Benjamin-Dobell/react-native-markdown-view#c04986537e9faae5ef685eb254b7fd3e0b8d780b"
@@ -14670,11 +14675,6 @@ react-native-snap-carousel@^3.9.1:
   dependencies:
     prop-types "^15.6.1"
     react-addons-shallow-compare "15.6.2"
-
-react-native-splash-screen@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/react-native-splash-screen/-/react-native-splash-screen-3.2.0.tgz#d47ec8557b1ba988ee3ea98d01463081b60fff45"
-  integrity sha512-Ls9qiNZzW/OLFoI25wfjjAcrf2DZ975hn2vr6U9gyuxi2nooVbzQeFoQS5vQcbCt9QX5NY8ASEEAtlLdIa6KVg==
 
 react-native-storybook-loader@^1.8.1:
   version "1.8.1"
