@@ -44,6 +44,10 @@ yarn pods (macOS only)
 
 [ReactNative Setup](https://facebook.github.io/react-native/docs/getting-started)
 
+### fix android emulator local api network error
+
+run `adb -s emulator-5554 reverse tcp:3000 tcp:3000` for forward localhost
+
 ### Android Workaround (currently handled by postinstall script) https://github.com/facebook/react-native/issues/25822
 
 ```
