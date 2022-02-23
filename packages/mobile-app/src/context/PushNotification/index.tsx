@@ -27,9 +27,7 @@ export const PushNotificationProvider: React.FC = ({ children }) => {
     Notifications.getInitialNotification().then((notification: any) => {
       if (notification) {
         const payload =
-          Platform.OS === 'ios'
-            ? notification.payload
-            : JSON.parse(notification.payload.payload);
+          Platform.OS === 'ios' ? notification.payload : notification.payload;
         setInitialNotification(payload);
       } else {
         setInitialNotification(null);
@@ -69,10 +67,7 @@ export const PushNotificationProvider: React.FC = ({ children }) => {
       Notifications.events().registerNotificationOpened(
         (notification: any, completion) => {
           if (rootNavigationRef.current) {
-            const payload =
-              Platform.OS === 'ios'
-                ? notification.payload
-                : JSON.parse(notification.payload.payload);
+            const payload = notification.payload;
             if (payload.action === 'procedureBulk') {
               rootNavigationRef.current.resetRoot(
                 getNavStateForConferenceWeek(),
